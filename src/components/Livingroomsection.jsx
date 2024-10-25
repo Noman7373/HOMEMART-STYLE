@@ -6,8 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProductWishList, addToCart } from "../store/cartslice";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 const Livingroomsection = () => {
   const [input, setinputValue] = useState("chair");
+
   const dispatch = useDispatch();
   // Get Data from Cartslice store
   const livingRoomItems = useSelector((state) => state.cart.allProducts);
@@ -42,8 +44,8 @@ const Livingroomsection = () => {
     setinputValue(inputValue);
   };
   // Mataching items category the data to the input
-  const allBedroomsProducts = livingRoomItems.filter(
-    (items) => items.category.toUpperCase() == input.toUpperCase()
+  const allBedroomsProducts = livingRoomItems.filter((items) =>
+    items.category.toUpperCase().includes(input.toUpperCase())
   );
 
   return (

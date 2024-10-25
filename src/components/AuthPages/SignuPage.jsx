@@ -3,34 +3,55 @@ import { BsEyeSlash } from "react-icons/bs";
 import { IoEyeOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { signUpUser } from "../../Api/Query/userQuery";
+// import { useDispatch } from "react-redux";
+// import { logIn, logOut } from "../../store/cartslice";
+// import { useCookies } from "react-cookie";
+// import { logOut } from "../../store/cartslice";
 
 const SignuPage = () => {
+  const [errors, setErrors] = useState({});
+  // const dispatch = useDispatch();
   const navigate = useNavigate();
   const InputRef = useRef(null);
-  const [passwordType, setPasswordType] = useState(false);
+  const [passwordType, setpasswordType] = useState(false);
   const [formValues, setFormValues] = useState({
-    Name: "",
-    Email: "",
-    Password: "",
+    name: "",
+    email: "",
+    password: "",
+    password_confirmation: "",
+    tc: false,
   });
-  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     InputRef.current.focus();
   }, []);
 
+  const handleChange = (e) => {
+    const { name, type, checked, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
   const validate = () => {
     const newErrors = {};
-    if (!formValues.Name) {
-      newErrors.Name = "Name is requried";
+    if (!formValues.name) {
+      newErrors.name = "name is requried";
     }
-    if (!formValues.Email) {
-      newErrors.Email = "Email is requried";
-    } else if (!/\S+@\S+\.\S+/.test(formValues.Email)) {
-      newErrors.Email = "Email is invalid";
+    if (!formValues.email) {
+      newErrors.email = "email is requried";
+    } else if (!/\S+@\S+\.\S+/.test(formValues.email)) {
+      newErrors.email = "email is invalid";
     }
-    if (!formValues.Password) {
-      newErrors.Password = "Password must be at least 8 characters";
+    if (!formValues.password || formValues.password.length < 0) {
+      newErrors.password = "password must be at least 8 characters";
+    }
+    if (formValues.password !== formValues.password_confirmation) {
+      newErrors.password_confirmation = "password must be match";
+    }
+    if (!formValues.tc) {
+      newErrors.tc = "You must accept the terms and conditions"; // Validation for tc
     }
     return newErrors;
   };
@@ -42,32 +63,32 @@ const SignuPage = () => {
       setErrors(validateErrors);
     } else {
       try {
-        const user = await signUpUser({
-          Name: formValues.Name,
-          Email: formValues.Email,
-          Password: formValues.Password,
+        const response = await signUpUser({
+          name: formValues.name,
+          email: formValues.email,
+          password: formValues.password,
+          password_confirmation: formValues.password_confirmation,
+          tc: formValues.tc,
         });
-        if (user) {
-          navigate("/"); // Redirect to home or any page on success
+        // console.log("API Response:", response);
+
+        // Check if the response contains a token
+        if (response) {
+          // dispatch(logIn({ tokenStr: response.data.token }));
+          // console.log("Navigating to home...");
+          navigate("/"); // Redirect to home or another page on success
+        } else {
+          setErrors({ submit: "Sign-up failed. Token not received." });
         }
       } catch (error) {
-        // Log the error message for debugging
         console.error("Sign-up failed:", error.message);
-  
-        // Optionally set a form-level error to display to the user
         setErrors({ submit: error.message });
       }
     }
   };
-  
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
-  };
-
-  function handleTooglePasswordType() {
-    setPasswordType((Prev) => !Prev);
+  function handleTooglepasswordType() {
+    setpasswordType((Prev) => !Prev);
   }
 
   return (
@@ -82,43 +103,43 @@ const SignuPage = () => {
               signup with your email
             </p>
             <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
-              {/* <label htmlFor="email">Email</label> */}
+              {/* <label htmlFor="email">email</label> */}
               <input
                 ref={InputRef}
-                name="Name"
+                name="name"
                 autoComplete="name"
-                type="name"
-                value={formValues.Name}
+                type="text"
+                value={formValues.name}
                 onChange={handleChange}
                 placeholder="Noman Ahmed"
                 className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
               />
-              {errors.Name && (
-                <div className="text-red-500 text-sm">{errors.Name}</div>
+              {errors.name && (
+                <div className="text-red-500 text-sm">{errors.name}</div>
               )}
               <input
-                name="Email"
+                name="email"
                 autoComplete="email"
                 type="email"
-                value={formValues.Email}
+                value={formValues.email}
                 onChange={handleChange}
                 placeholder="officialnomanahmed@gamilcom"
                 className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
               />
 
-              {errors.Email && (
-                <div className="text-red-500 text-sm">{errors.Email}</div>
+              {errors.email && (
+                <div className="text-red-500 text-sm">{errors.email}</div>
               )}
               {/* <label htmlFor="password">password</label> */}
               <div className="relative">
                 <input
-                  name="Password"
+                  name="password"
                   type={`${passwordType ? "email" : "password"}`}
-                  placeholder={`${passwordType ? "Password" : "********"}`}
+                  placeholder={`${passwordType ? "password" : "********"}`}
                   className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
-                  autoComplete="current-password"
+                  autoComplete="password"
                   autoCapitalize="off"
-                  value={formValues.Password}
+                  value={formValues.password}
                   onChange={handleChange}
                 />
 
@@ -126,20 +147,46 @@ const SignuPage = () => {
                   <IoEyeOutline
                     size={22}
                     className="absolute inset-y-0 top-3 right-3 flex items-center text-gray-500 cursor-pointer hover:text-black"
-                    onClick={handleTooglePasswordType}
+                    onClick={handleTooglepasswordType}
                   />
                 ) : (
                   <BsEyeSlash
                     size={22}
                     className="absolute inset-y-0 top-3 right-3 flex items-center text-gray-500 cursor-pointer hover:text-black"
-                    onClick={handleTooglePasswordType}
+                    onClick={handleTooglepasswordType}
                   />
                 )}
               </div>
 
-              {errors.Password && (
-                <div className="text-red-500 text-sm">{errors.Email}</div>
+              <input
+                name="password_confirmation"
+                type={`${passwordType ? "email" : "password"}`}
+                placeholder={`${passwordType ? "password" : "********"}`}
+                className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
+                autoComplete="password_confirmation"
+                autoCapitalize="off"
+                value={formValues.password_confirmation}
+                onChange={handleChange}
+              />
+
+              {errors.password_confirmation && (
+                <div className="text-red-500 text-sm">
+                  {errors.password_confirmation}
+                </div>
               )}
+
+              <div className="flex gap-2">
+                <input
+                  type="checkbox"
+                  name="tc"
+                  checked={formValues.tc}
+                  onChange={handleChange}
+                />
+                <p className="text-white">
+                  I agree to the terms and conditions
+                </p>
+              </div>
+              {errors.tc && <div className="text-red-600">{errors.tc}</div>}
               <button
                 type="submit"
                 className="bg-green-500 text-white p-2 rounded font-bold"
@@ -148,9 +195,9 @@ const SignuPage = () => {
               </button>
             </form>
 
-            {errors.submit && (
-  <div className="text-red-500 text-sm">{errors.submit}</div>
-)}
+            {errors.tc && (
+              <div className="text-red-500 text-sm">{errors.tc}</div>
+            )}
 
             <p className="text-center text-white mt-6">
               Already have an account?{" "}

@@ -4,8 +4,14 @@ import { BsEyeSlash } from "react-icons/bs";
 import { IoEyeOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { signinUser } from "../../Api/Query/userQuery";
+import { useDispatch } from "react-redux";
+import { useCookies } from "react-cookie";
+import { jwtDecode } from "jwt-decode";
+import { logIn, logOut, setUser } from "../../store/cartslice";
 
 const LoginPage = () => {
+  const [cookies, setCookies, removeCookie] = useCookies(["jwt"]);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const inputRef = useRef(null);
   const [email, setEmail] = useState("");
@@ -16,12 +22,12 @@ const LoginPage = () => {
   const validate = () => {
     const newError = {};
     if (!email) {
-      newError.Email = "Email is required";
+      newError.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newError.Email = "Email is not valid";
+      newError.email = "Email is not valid";
     }
     if (!password) {
-      newError.Password = "Password is requried";
+      newError.password = "Password is requried";
     }
     return newError;
   };
@@ -33,12 +39,25 @@ const LoginPage = () => {
       setError(validateError);
     } else {
       try {
-        const user = await signinUser({
+        const response = await signinUser({
           email: email,
           password: password,
         });
-        if (user) {
-          navigate("/");
+
+        console.log(response);
+        const userData = response.data;
+        dispatch(setUser(userData));
+
+        if (response && response.data) {
+          const { tokenStr } = response.data;
+          const { exp } = jwtDecode(tokenStr);
+          dispatch(logIn({ tokenStr }));
+          setCookies("jwt", tokenStr, {
+            path: "/",
+            maxAge: exp,
+            sameSite: true,
+          });
+          dispatch(logOut());
         }
       } catch (error) {
         throw new Error("User not found");
@@ -66,26 +85,32 @@ const LoginPage = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                name="Email"
+                name="email"
                 ref={inputRef}
                 autoComplete="email"
                 type="email"
                 placeholder="officialnomanahmed@gamilcom"
                 className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
               />
+              {error.email && (
+                <div className="text-red-500 text-sm">{error.email}</div>
+              )}
               {/* <label htmlFor="password">password</label> */}
               <div className="relative">
                 <input
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  name="Password"
+                  name="password"
                   type={`${passwordType ? "email" : "password"}`}
                   placeholder={`${passwordType ? "Password" : "********"}`}
                   className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
                   autoComplete="current-password"
                   autoCapitalize="off"
                 />
+                {error.password && (
+                  <div className="text-red-500 text-sm">{error.password}</div>
+                )}
                 {passwordType ? (
                   <IoEyeOutline
                     size={22}

@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { useCookies } from "react-cookie";
-import jwtDecode from "jwt-decode";
+// import jwtDecode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 
 import img1 from "../assets/circleT.avif";
 import img2 from "../assets/cushion1.avif";
@@ -1810,9 +1811,10 @@ let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 let wishListProduct = JSON.parse(localStorage.getItem("Wishlist")) || [];
 
 const cartSlice = createSlice({
-  authName: "user",
   name: "cart",
   initialState: {
+    userInfo: null,
+    isLoggedIn: false,
     data: cartItems,
     allProducts: allItemsData,
     userFavProducts: wishListProduct,
@@ -1871,9 +1873,22 @@ const cartSlice = createSlice({
     },
     logIn: (state, action) => {
       const { tokenStr } = action.payload;
-      if(tokenStr) {
-
+      if (tokenStr) {
+        state.token = tokenStr;
+        state.user = jwtDecode(tokenStr); // Decode user information from token
       }
+    },
+    logOut: (state) => {
+      state.token = null;
+      state.user = null;
+    },
+    setUser: (state, action) => {
+      state.userInfo = action.payload;
+      state.isLoggedIn = true;
+    },
+    clearUser: (state) => {
+      state.userInfo = null;
+      state.isLoggedIn = false;
     },
   },
 });
@@ -1885,5 +1900,9 @@ export const {
   decreamentQuantity,
   addProductWishList,
   removeProductsWishList,
+  logOut,
+  logIn,
+  setUser,
+  clearUser,
 } = cartSlice.actions;
 export default cartSlice.reducer;

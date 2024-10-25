@@ -17,6 +17,7 @@ import Forgotpassword from "./components/AuthPages/Forgotpassword";
 import ForgotSuccess from "./components/AuthPages/ForgotSuccess";
 import PasswordReset from "./components/AuthPages/PasswordReset";
 import SuccessResetPassword from "./components/AuthPages/SuccessResetPassword";
+import UserProfile from "./components/UserProfile";
 
 function App() {
   const router = createBrowserRouter([
@@ -91,6 +92,10 @@ function App() {
         {
           path: "/password-reset-success",
           element: <SuccessResetPassword />,
+        },
+        {
+          path: "/profile",
+          element: <UserProfile />,
         },
       ],
     },
