@@ -21,6 +21,7 @@ import SuccessResetPassword from "./components/AuthPages/SuccessResetPassword";
 import UserProfile from "./components/UserProfile";
 import ProtecRoutes from "./components/AuthProtector/ProtecRoutes";
 import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
 
 function App() {
   const router = createBrowserRouter([
@@ -72,14 +73,6 @@ function App() {
           path: "/contact",
           element: <Contact />,
         },
-        {
-          path: "/checkout-details",
-          element: (
-            <ProtecRoutes>
-              <Checkout />,
-            </ProtecRoutes>
-          ),
-        },
 
         {
           path: "/signup",
@@ -118,6 +111,15 @@ function App() {
     {
       path: "/main",
       element: <Main />,
+    },
+    {
+      path: "/checkout-details",
+      element: (
+        <ProtecRoutes>
+          <Checkout />,
+          <Footer />
+        </ProtecRoutes>
+      ),
     },
   ]);
 
