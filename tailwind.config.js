@@ -14,6 +14,9 @@ module.exports = {
         "2xl": "1536px", // 2X large devices (default)
         "custom-lg": "1440px", // Custom large breakpoint
       },
+      outline: {
+        customouline: "3px solid rgb(0,174,255)",
+      },
     },
   },
   plugins: [],
