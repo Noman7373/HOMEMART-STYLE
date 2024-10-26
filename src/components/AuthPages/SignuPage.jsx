@@ -3,14 +3,11 @@ import { BsEyeSlash } from "react-icons/bs";
 import { IoEyeOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { signUpUser } from "../../Api/Query/userQuery";
-// import { useDispatch } from "react-redux";
-// import { logIn, logOut } from "../../store/cartslice";
-// import { useCookies } from "react-cookie";
-// import { logOut } from "../../store/cartslice";
+import { toast } from "react-toastify";
 
 const SignuPage = () => {
   const [errors, setErrors] = useState({});
-  // const dispatch = useDispatch();
+
   const navigate = useNavigate();
   const InputRef = useRef(null);
   const [passwordType, setpasswordType] = useState(false);
@@ -36,17 +33,7 @@ const SignuPage = () => {
 
   const validate = () => {
     const newErrors = {};
-    if (!formValues.name) {
-      newErrors.name = "name is requried";
-    }
-    if (!formValues.email) {
-      newErrors.email = "email is requried";
-    } else if (!/\S+@\S+\.\S+/.test(formValues.email)) {
-      newErrors.email = "email is invalid";
-    }
-    if (!formValues.password || formValues.password.length < 0) {
-      newErrors.password = "password must be at least 8 characters";
-    }
+
     if (formValues.password !== formValues.password_confirmation) {
       newErrors.password_confirmation = "password must be match";
     }
@@ -70,19 +57,26 @@ const SignuPage = () => {
           password_confirmation: formValues.password_confirmation,
           tc: formValues.tc,
         });
-        // console.log("API Response:", response);
+        const token = response.data.token;
+        if (token) {
+          navigate("/login");
+          toast.success("Signup successfully", {
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
 
-        // Check if the response contains a token
-        if (response) {
-          // dispatch(logIn({ tokenStr: response.data.token }));
-          // console.log("Navigating to home...");
-          navigate("/"); // Redirect to home or another page on success
-        } else {
-          setErrors({ submit: "Sign-up failed. Token not received." });
+            draggable: true,
+            theme: "light",
+          });
         }
       } catch (error) {
-        console.error("Sign-up failed:", error.message);
-        setErrors({ submit: error.message });
+        toast.error(`${error}`, {
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          draggable: true,
+          theme: "red",
+        });
       }
     }
   };
@@ -94,7 +88,7 @@ const SignuPage = () => {
   return (
     <div className="py-[100px] px-[20px]">
       <div className="flex flex-row justify-center">
-        <div className="bg-slate-900 md:px-[70px] flex flex-col p-[20px] rounded shadow-2xl">
+        <div className="bg-slate-900 md:px-[70px] flex flex-col p-[10px] rounded shadow-2xl">
           <div className="flex flex-col w-[275px] h-full">
             <h1 className="text-center text-slate-50 font-semibold text-[20px] capitalize mb-3">
               It's nice having you here!
@@ -105,6 +99,7 @@ const SignuPage = () => {
             <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
               {/* <label htmlFor="email">email</label> */}
               <input
+                required
                 ref={InputRef}
                 name="name"
                 autoComplete="name"
@@ -112,31 +107,27 @@ const SignuPage = () => {
                 value={formValues.name}
                 onChange={handleChange}
                 placeholder="Noman Ahmed"
-                className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
+                className="bg-white text-slate-800 p-2 rounded shadow w-full outline-0"
               />
-              {errors.name && (
-                <div className="text-red-500 text-sm">{errors.name}</div>
-              )}
+
               <input
+                required
                 name="email"
                 autoComplete="email"
                 type="email"
                 value={formValues.email}
                 onChange={handleChange}
                 placeholder="officialnomanahmed@gamilcom"
-                className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
+                className="bg-white text-slate-800 p-2 rounded shadow w-full outline-0"
               />
 
-              {errors.email && (
-                <div className="text-red-500 text-sm">{errors.email}</div>
-              )}
-              {/* <label htmlFor="password">password</label> */}
               <div className="relative">
                 <input
+                  required
                   name="password"
                   type={`${passwordType ? "email" : "password"}`}
                   placeholder={`${passwordType ? "password" : "********"}`}
-                  className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
+                  className="bg-white text-slate-800 p-2 rounded shadow w-full outline-0"
                   autoComplete="password"
                   autoCapitalize="off"
                   value={formValues.password}
@@ -159,10 +150,11 @@ const SignuPage = () => {
               </div>
 
               <input
+                required
                 name="password_confirmation"
                 type={`${passwordType ? "email" : "password"}`}
                 placeholder={`${passwordType ? "password" : "********"}`}
-                className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
+                className="bg-white text-slate-800 p-2 rounded shadow w-full outline-0"
                 autoComplete="password_confirmation"
                 autoCapitalize="off"
                 value={formValues.password_confirmation}
@@ -194,12 +186,12 @@ const SignuPage = () => {
                 Sign Up
               </button>
             </form>
-
+            {/* 
             {errors.tc && (
               <div className="text-red-500 text-sm">{errors.tc}</div>
-            )}
+            )} */}
 
-            <p className="text-center text-white mt-6">
+            <p className="text-center text-white mt-1">
               Already have an account?{" "}
               <Link to="/login" className="uppercase font-bold">
                 LOG IN

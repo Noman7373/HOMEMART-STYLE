@@ -1,3 +1,4 @@
+import userImage from "../assets/OIP.jpg";
 import React, { useState } from "react";
 import { BiMenu, BiSearch } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa";
@@ -8,12 +9,15 @@ import Productcart from "./Productcart";
 import Whishlist from "./Whishlist";
 import { TbArrowsCross } from "react-icons/tb";
 import SearchProduct from "./SearchProduct";
+import userAuth from "../customHook/userAuth";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [cartShow, setCartShow] = useState(false);
   const [WishlistShow, setWishlistShow] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+
+  const { token } = userAuth();
   // const addToCartProductQuantity = useSelector((state) => state.cart.data);
 
   //Handle Side Menu for small Screen
@@ -86,16 +90,30 @@ const Navbar = () => {
         </ul>
 
         <div className="flex justify-center items-center gap-2">
-          <Link to="/login">
-            <button className="border border-white p-1 align-middle rounded xs:hidden md:block">
-              Login
-            </button>
-          </Link>
-          <Link to="/signup">
-            <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold xs:hidden md:block">
-              Signup
-            </button>
-          </Link>
+          {!token ? (
+            <div className="flex justify-center items-center gap-2">
+              <Link to="/login">
+                <button className="border border-white p-1 align-middle rounded xs:hidden md:block">
+                  Login
+                </button>
+              </Link>
+              <Link to="/signup">
+                <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold xs:hidden md:block">
+                  Signup
+                </button>
+              </Link>
+            </div>
+          ) : (
+            <Link to="/profile">
+              <figure>
+                <img
+                  src={userImage}
+                  alt="userImage"
+                  className="w-8 rounded-3xl"
+                />
+              </figure>
+            </Link>
+          )}
           <button
             className="hover:text-slate-400 text-[30px]"
             onClick={handleSearch}

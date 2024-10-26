@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Applayout from "./components/Applayout";
 import Main from "./components/Main";
 import About from "./components/About";
@@ -18,6 +19,8 @@ import ForgotSuccess from "./components/AuthPages/ForgotSuccess";
 import PasswordReset from "./components/AuthPages/PasswordReset";
 import SuccessResetPassword from "./components/AuthPages/SuccessResetPassword";
 import UserProfile from "./components/UserProfile";
+import ProtecRoutes from "./components/AuthProtector/ProtecRoutes";
+import Checkout from "./components/Checkout";
 
 function App() {
   const router = createBrowserRouter([
@@ -70,6 +73,15 @@ function App() {
           element: <Contact />,
         },
         {
+          path: "/checkout-details",
+          element: (
+            <ProtecRoutes>
+              <Checkout />,
+            </ProtecRoutes>
+          ),
+        },
+
+        {
           path: "/signup",
           element: <SignuPage />,
         },
@@ -95,7 +107,11 @@ function App() {
         },
         {
           path: "/profile",
-          element: <UserProfile />,
+          element: (
+            <ProtecRoutes>
+              <UserProfile />,
+            </ProtecRoutes>
+          ),
         },
       ],
     },

@@ -1,21 +1,21 @@
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import userImage from "../assets/user_avater.jpg";
-import { useDispatch, useSelector } from "react-redux";
-import { useCookies } from "react-cookie";
-import { logOut } from "../store/cartslice";
+import userAuth from "../customHook/userAuth";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify"; // Import toast directly
 
 const UserProfile = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [cookies, setCookies, removeCookies] = useCookies();
-  const { userInfo, isLoggedIn } = useSelector((state) => state.cart);
-  console.log(userInfo);
-  console.log(isLoggedIn);
-
+  const { userLogOut } = userAuth(); // Assuming `user` contains name and email
   const handleLogOut = () => {
-    removeCookies("jwt", { path: "/" });
-    dispatch(logOut());
+    userLogOut();
+    toast.success("Logout successfully", {
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      draggable: true,
+      theme: "light",
+    });
     navigate("/signup");
   };
 
@@ -33,10 +33,10 @@ const UserProfile = () => {
             <div className="flex flex-col justify-start items-start gap-8">
               <h1>My Profile</h1>
               <p className="flex justify-center items-center gap-2">
-                Name <strong>Noman</strong>
+                Name: <strong>{"Noman"}</strong>
               </p>
               <p className="flex justify-center items-center gap-2">
-                Email <span>nkdfasdf</span>
+                Email: <span>{"example@domain.com"}</span>
               </p>
               <button
                 className="flex justify-center items-center gap-2 px-4 py-2 bg-orange-500 rounded text-white font-semibold hover:text-orange-900"

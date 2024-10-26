@@ -1,67 +1,51 @@
-import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { BsEyeSlash } from "react-icons/bs";
 import { IoEyeOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { signinUser } from "../../Api/Query/userQuery";
-import { useDispatch } from "react-redux";
-import { useCookies } from "react-cookie";
-import { jwtDecode } from "jwt-decode";
-import { logIn, logOut, setUser } from "../../store/cartslice";
+import userAuth from "../../customHook/userAuth";
+import { Slide, toast } from "react-toastify";
 
 const LoginPage = () => {
-  const [cookies, setCookies, removeCookie] = useCookies(["jwt"]);
-  const dispatch = useDispatch();
+  const { userLogIn } = userAuth();
   const navigate = useNavigate();
   const inputRef = useRef(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState({});
   const [passwordType, setPasswordType] = useState(false);
-
-  const validate = () => {
-    const newError = {};
-    if (!email) {
-      newError.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newError.email = "Email is not valid";
-    }
-    if (!password) {
-      newError.password = "Password is requried";
-    }
-    return newError;
-  };
 
   const handeLogin = async (e) => {
     e.preventDefault();
-    const validateError = validate();
-    if (Object.keys(validateError).length > 0) {
-      setError(validateError);
-    } else {
-      try {
-        const response = await signinUser({
-          email: email,
-          password: password,
+
+    try {
+      const response = await signinUser({
+        email: email,
+        password: password,
+      });
+
+      const token = response.token;
+
+      if (token) {
+        userLogIn(token);
+        navigate("/profile");
+        toast.success("Login Successfully", {
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+
+          draggable: true,
+          theme: "light",
         });
-
-        console.log(response);
-        const userData = response.data;
-        dispatch(setUser(userData));
-
-        if (response && response.data) {
-          const { tokenStr } = response.data;
-          const { exp } = jwtDecode(tokenStr);
-          dispatch(logIn({ tokenStr }));
-          setCookies("jwt", tokenStr, {
-            path: "/",
-            maxAge: exp,
-            sameSite: true,
-          });
-          dispatch(logOut());
-        }
-      } catch (error) {
-        throw new Error("User not found");
       }
+    } catch (error) {
+      toast.error(`${error}`, {
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "red",
+      });
     }
   };
 
@@ -92,10 +76,7 @@ const LoginPage = () => {
                 placeholder="officialnomanahmed@gamilcom"
                 className="bg-white text-slate-800 p-3 rounded shadow w-full outline-0"
               />
-              {error.email && (
-                <div className="text-red-500 text-sm">{error.email}</div>
-              )}
-              {/* <label htmlFor="password">password</label> */}
+
               <div className="relative">
                 <input
                   required
@@ -108,9 +89,7 @@ const LoginPage = () => {
                   autoComplete="current-password"
                   autoCapitalize="off"
                 />
-                {error.password && (
-                  <div className="text-red-500 text-sm">{error.password}</div>
-                )}
+
                 {passwordType ? (
                   <IoEyeOutline
                     size={22}

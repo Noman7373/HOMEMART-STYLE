@@ -6,6 +6,7 @@ import {
   increamentQuantity,
   removeItemCart,
 } from "../store/cartslice";
+import { Link } from "react-router-dom";
 
 const Productcart = ({ showCart, handleFunction }) => {
   const addToCartProducts = useSelector((state) => state.cart.data);
@@ -120,9 +121,11 @@ const Productcart = ({ showCart, handleFunction }) => {
               SUBTOTAL{" "}
               <span className="font-semibold text-white">${totalAmout}</span>
             </p>
-            <button className="text-white bg-green-500 rounded px-6 py-2 hover:bg-black">
-              Checkout
-            </button>
+            <Link to="/checkout-details" onClick={handleFunction}>
+              <button className="text-white bg-green-500 rounded px-6 py-2 hover:bg-black">
+                Checkout
+              </button>
+            </Link>
           </div>
         ) : (
           ""
