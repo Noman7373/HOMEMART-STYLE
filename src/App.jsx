@@ -20,8 +20,9 @@ import PasswordReset from "./components/AuthPages/PasswordReset";
 import SuccessResetPassword from "./components/AuthPages/SuccessResetPassword";
 import UserProfile from "./components/UserProfile";
 import ProtecRoutes from "./components/AuthProtector/ProtecRoutes";
-import Checkout from "./components/Checkout";
-import Footer from "./components/Footer";
+
+import CheckoutAddress from "./components/CheckoutAddress";
+import CheckoutEmail from "./components/CheckoutEmail";
 
 function App() {
   const router = createBrowserRouter([
@@ -113,13 +114,12 @@ function App() {
       element: <Main />,
     },
     {
-      path: "/checkout-details",
-      element: (
-        <ProtecRoutes>
-          <Checkout />,
-          <Footer />
-        </ProtecRoutes>
-      ),
+      path: "/checkOutEmail",
+      element: <CheckoutEmail />,
+    },
+    {
+      path: "/checkOutAddress",
+      element: <CheckoutAddress />,
     },
   ]);
 

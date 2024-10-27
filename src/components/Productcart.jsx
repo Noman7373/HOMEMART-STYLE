@@ -121,7 +121,7 @@ const Productcart = ({ showCart, handleFunction }) => {
               SUBTOTAL{" "}
               <span className="font-semibold text-white">${totalAmout}</span>
             </p>
-            <Link to="/checkout-details" onClick={handleFunction}>
+            <Link to="/checkoutEmail" onClick={handleFunction}>
               <button className="text-white bg-green-500 rounded px-6 py-2 hover:bg-black">
                 Checkout
               </button>
