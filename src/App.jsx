@@ -23,6 +23,7 @@ import ProtecRoutes from "./components/AuthProtector/ProtecRoutes";
 
 import CheckoutAddress from "./components/CheckoutAddress";
 import CheckoutEmail from "./components/CheckoutEmail";
+import CheckoutPayment from "./components/CheckoutPayment";
 
 function App() {
   const router = createBrowserRouter([
@@ -120,6 +121,10 @@ function App() {
     {
       path: "/checkOutAddress",
       element: <CheckoutAddress />,
+    },
+    {
+      path: "/checkoutPayment",
+      element: <CheckoutPayment />,
     },
   ]);
 
