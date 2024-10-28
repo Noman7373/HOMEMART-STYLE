@@ -6,8 +6,10 @@ import { HiHeart } from "react-icons/hi2";
 import { BiCartAdd } from "react-icons/bi";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import userAuth from "../customHook/userAuth";
 
 const Allnewarrivalitems = ({ items }) => {
+  const { Toast } = userAuth();
   const dispatch = useDispatch();
   const { id, name, img, description, price, actualPrice } = items;
   
@@ -26,11 +28,13 @@ const Allnewarrivalitems = ({ items }) => {
       quantity: 1,
     };
     dispatch(addToCart(product));
+    Toast(`${name} Added to Cart`);
   }
 
   function handleWishList(id, name, img, price, actualPrice) {
     let favProducts = { id, name, img, price, actualPrice };
     dispatch(addProductWishList(favProducts));
+    Toast(`${name} Added to WishList`);
   }
   return (
     <>

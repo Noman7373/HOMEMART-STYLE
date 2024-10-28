@@ -9,7 +9,6 @@ import {
 import { Link } from "react-router-dom";
 import userAuth from "../customHook/userAuth";
 
-
 const Productcart = ({ showCart, handleFunction }) => {
   const { Toast } = userAuth();
   const addToCartProducts = useSelector((state) => state.cart.data);
@@ -39,8 +38,8 @@ const Productcart = ({ showCart, handleFunction }) => {
       <div
         className={`${
           showCart
-            ? "fixed bg-slate-800 overflow-y-auto overflow-x-hidden h-full w-[500px] z-50 right-0 flex flex-col px-2"
-            : "right-[-100px]"
+            ? "fixed bg-slate-800 overflow-y-auto sm:w-[400px] overflow-x-hidden h-full md:w-[500px] z-50 right-0 flex flex-col px-2"
+            : "right-[-100px] max-[350px]:w-[200px]"
         }`}
       >
         <div className="flex justify-end relative">
@@ -54,7 +53,7 @@ const Productcart = ({ showCart, handleFunction }) => {
         <div
           className={`${
             showCart
-              ? "overflow-y-auto custom-scrollbar mt-[60px] pb-[105px]"
+              ? "overflow-y-auto custom-scrollbar mt-[60px] sm:w-[370px] md:w-[480px] pb-[105px]"
               : "hidden"
           }`}
         >
@@ -63,7 +62,7 @@ const Productcart = ({ showCart, handleFunction }) => {
               ({ id, name, img, price, actualPrice, quantity }) => (
                 <div
                   key={id}
-                  className="flex items-center h-[200px] justify-around gap-2 p-2 border-b-[2px] border-b-slate-700"
+                  className="flex items-center sm:w-[370px] md:w-full h-[200px] justify-around gap-2 p-2 border-b-[2px] border-b-slate-700"
                 >
                   <div className="max-w-[150px]">
                     <img

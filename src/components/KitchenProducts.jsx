@@ -7,10 +7,10 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import userAuth from "../customHook/userAuth";
-const { Toast } = userAuth();
 
 const KitchenProducts = () => {
   const dispatch = useDispatch();
+  const { Toast } = userAuth();
 
   // Get Data from Cartslice store
   const allBestProducts = useSelector((state) => state.cart.allProducts);

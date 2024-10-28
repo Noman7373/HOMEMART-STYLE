@@ -63,17 +63,17 @@ const CheckoutEmail = () => {
   return (
     <>
       <ScrollTop />
-      <div className="w-full flex flex-col mx-auto h-[1048px] md:flex-row">
-        <div className="px-5 flex flex-col pt-5 md:w-[750px]">
-          <div className="flex flex-col gap-6">
+      <div className="w-full flex flex-col mx-auto h-[1048px] md:flex-row max-[545px]:w-[400px] sm:w-[700px] md:w-full">
+        <div className="px-5 flex flex-col pt-5 md:w-[750px] max-[545px]:w-[400px] xs:w-full">
+          <div className="flex flex-col gap-6 xs:mb-3">
             <h1 className="uppercase text-[20px] font-bold">Homemart Style</h1>
-            <div className="w-[670px] px-2 h-20  flex flex-col justify-center items-center bg-[rgb(226,232,231)] rounded-3xl bg-[linear-gradient(145deg, #cacaca, #f0f0f0)] shadow-[5px_5px_17px_#b3b3b3,_-5px_-5px_17px_#fff] md:flex-row ">
-              <div className="w-full h-[4px] bg-[rgb(255,255,255)] flex items-center">
+            <div className="md:w-[670px] px-2 h-20 sm:w-[400px] flex flex-col justify-center items-center bg-[rgb(226,232,231)] rounded-3xl bg-[linear-gradient(145deg, #cacaca, #f0f0f0)] shadow-[5px_5px_17px_#b3b3b3,_-5px_-5px_17px_#fff] md:flex-row ">
+              <div className="w-full sm:w-full h-[4px] bg-[rgb(255,255,255)] flex items-center">
                 <ProgressLineInner
                   $percentageStart={percentageStart}
                   $percentCompleted={percentageCompleted}
                 >
-                  <div className="absolute flex justify-between w-[655px]">
+                  <div className="absolute flex  justify-between xs:w-[345px] md:w-[660px] sm:w-full flex-wrap">
                     {arr.map((items, index) => {
                       return (
                         <div
@@ -126,10 +126,10 @@ const CheckoutEmail = () => {
             </button>
           </div>
         </div>
-        <div className="bg-[#F1F5F9] relative h-full w-[520px]">
-          <div className="flex flex-col h-full pt-4 px-5 gap-14">
+        <div className="bg-[#F1F5F9] relative h-full w-[520px] max-[545px]:w-[400px] xs:w-[400px] sm:w-full md:w-full">
+          <div className="flex flex-col h-full pt-4 px-5 gap-14 md:w-full xs:w-[400px] sm:w-[600px] max-[500px]:w-[300px]">
             <div
-              className="flex flex-col bg-white p-3 rounded cursor-pointer gap-5 shadow-rgba(39, 39, 43, 0.2) 0px 7px 29px 0px;"
+              className="flex flex-col flex-wrap w-full bg-white p-3 rounded cursor-pointer gap-5 shadow-rgba(39, 39, 43, 0.2) 0px 7px 29px 0px;"
               onClick={() => handleCartItemShow()}
             >
               <div className="flex justify-between">
@@ -150,23 +150,23 @@ const CheckoutEmail = () => {
                     className={`${
                       showCartProduct
                         ? "hidden"
-                        : "flex justify-between items-center mt-1"
+                        : "flex justify-between items-center mt-1 md:w-full sm:w-full"
                     }`}
                   >
-                    <div className="w-[120px] h-[100px]">
+                    <div className="w-[120px] h-[100px] xs:w-[100px]">
                       <img
                         src={items.img}
                         alt={items.name}
                         className="w-full h-full"
                       />
                     </div>
-                    <p className="uppercase text-slate-900 font-bold">
+                    <p className="uppercase text-slate-900 font-bold xs:text-[13px]">
                       Expensive
                     </p>
-                    <p className="text-[18px] font-semibold">
+                    <p className="text-[18px] font-semibold xs:text-[15px]">
                       Quantity : {items.quantity}
                     </p>
-                    <p className="flex gap-1 font-bold">
+                    <p className="flex gap-1 font-bold xs:text-[13px]">
                       ${items.price}{" "}
                       <span className="text-slate-500 line-through">
                         {items.actualPrice}
