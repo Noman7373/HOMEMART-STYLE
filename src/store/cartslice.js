@@ -180,7 +180,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 250,
-    actualPrice: "$240",
+    actualPrice: 240,
   },
   {
     category: "New_Arrival",
@@ -190,7 +190,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 270,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "New_Arrival",
@@ -200,7 +200,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 300,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "New_Arrival",
@@ -210,7 +210,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 320,
-    actualPrice: "$290",
+    actualPrice: 290,
   },
   {
     category: "New_Arrival",
@@ -220,7 +220,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$135",
+    actualPrice: 135,
   },
   {
     category: "New_Arrival",
@@ -230,7 +230,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 210,
-    actualPrice: "$190",
+    actualPrice: 190,
   },
   {
     category: "New_Arrival",
@@ -240,7 +240,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 270,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "New_Arrival",
@@ -250,7 +250,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 350,
-    actualPrice: "$320",
+    actualPrice: 320,
   },
   {
     category: "Best_Seller",
@@ -260,7 +260,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 250,
-    actualPrice: "$240",
+    actualPrice: 240,
   },
   {
     category: "Best_Seller",
@@ -270,7 +270,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 270,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "Best_Seller",
@@ -280,7 +280,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 300,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "Best_Seller",
@@ -290,7 +290,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 320,
-    actualPrice: "$290",
+    actualPrice: 290,
   },
   {
     category: "Best_Seller",
@@ -300,7 +300,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$135",
+    actualPrice: 135,
   },
   {
     category: "Best_Seller",
@@ -310,7 +310,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 210,
-    actualPrice: "$190",
+    actualPrice: 190,
   },
   {
     category: "Best_Seller",
@@ -320,7 +320,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 270,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "Best_Seller",
@@ -330,7 +330,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 350,
-    actualPrice: "$320",
+    actualPrice: 320,
   },
   {
     category: "BEDS",
@@ -340,7 +340,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 250,
-    actualPrice: "$240",
+    actualPrice: 240,
   },
   {
     category: "BEDS",
@@ -350,7 +350,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 270,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "BEDS",
@@ -360,7 +360,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 300,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "BEDS",
@@ -370,7 +370,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 320,
-    actualPrice: "$290",
+    actualPrice: 290,
   },
   {
     category: "BEDS",
@@ -380,7 +380,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$135",
+    actualPrice: 135,
   },
   {
     category: "BEDS",
@@ -390,7 +390,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 210,
-    actualPrice: "$190",
+    actualPrice: 190,
   },
   {
     category: "BEDS",
@@ -400,7 +400,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 270,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "BEDS",
@@ -410,7 +410,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 350,
-    actualPrice: "$320",
+    actualPrice: 320,
   },
   {
     category: "DRESSERS",
@@ -420,7 +420,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "DRESSERS",
@@ -430,7 +430,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$190",
+    actualPrice: 190,
   },
   {
     category: "DRESSERS",
@@ -440,7 +440,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "DRESSERS",
@@ -450,7 +450,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 110,
-    actualPrice: "$130",
+    actualPrice: 130,
   },
   {
     category: "DRESSERS",
@@ -460,7 +460,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "DRESSERS",
@@ -470,7 +470,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 120,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "DRESSERS",
@@ -480,7 +480,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 110,
-    actualPrice: "$130",
+    actualPrice: 130,
   },
   {
     category: "DRESSERS",
@@ -490,7 +490,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 130,
-    actualPrice: "$160",
+    actualPrice: 160,
   },
   {
     category: "DRESSERS",
@@ -500,7 +500,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 70,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "DRESSERS",
@@ -510,7 +510,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$125",
+    actualPrice: 125,
   },
   {
     category: "DRESSERS",
@@ -520,7 +520,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 80,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "DRESSERS",
@@ -530,7 +530,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$75",
+    actualPrice: 75,
   },
   {
     category: "DRESSERS",
@@ -540,7 +540,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$170",
+    actualPrice: 170,
   },
   {
     category: "NIGHTSTANDS",
@@ -550,7 +550,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 120,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "NIGHTSTANDS",
@@ -560,7 +560,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 70,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "NIGHTSTANDS",
@@ -570,7 +570,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "NIGHTSTANDS",
@@ -580,7 +580,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "NIGHTSTANDS",
@@ -590,7 +590,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 120,
-    actualPrice: "$160",
+    actualPrice: 160,
   },
   {
     category: "NIGHTSTANDS",
@@ -600,7 +600,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 80,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "NIGHTSTANDS",
@@ -610,7 +610,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$160",
+    actualPrice: 160,
   },
   {
     category: "Chair",
@@ -620,7 +620,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 250,
-    actualPrice: "$240",
+    actualPrice: 240,
   },
   {
     category: "Chair",
@@ -630,7 +630,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 270,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "Chair",
@@ -640,7 +640,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 300,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "Chair",
@@ -650,7 +650,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 320,
-    actualPrice: "$290",
+    actualPrice: 290,
   },
   {
     category: "Chair",
@@ -660,7 +660,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$135",
+    actualPrice: 135,
   },
   {
     category: "Chair",
@@ -670,7 +670,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 210,
-    actualPrice: "$190",
+    actualPrice: 190,
   },
   {
     category: "Chair",
@@ -680,7 +680,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 270,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "Chair",
@@ -690,7 +690,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 350,
-    actualPrice: "$320",
+    actualPrice: 320,
   },
   {
     category: "Chair",
@@ -700,7 +700,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "Chair",
@@ -710,7 +710,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$190",
+    actualPrice: 190,
   },
   {
     category: "Chair",
@@ -720,7 +720,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Chair",
@@ -730,7 +730,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 110,
-    actualPrice: "$130",
+    actualPrice: 130,
   },
   {
     category: "Chair",
@@ -740,7 +740,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "Chair",
@@ -750,7 +750,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 120,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Chair",
@@ -760,7 +760,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 110,
-    actualPrice: "$130",
+    actualPrice: 130,
   },
   {
     category: "sofa",
@@ -770,7 +770,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 130,
-    actualPrice: "$160",
+    actualPrice: 160,
   },
   {
     category: "sofa",
@@ -780,7 +780,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 70,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "sofa",
@@ -790,7 +790,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$125",
+    actualPrice: 125,
   },
   {
     category: "sofa",
@@ -800,7 +800,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 80,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "sofa",
@@ -810,7 +810,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$75",
+    actualPrice: 75,
   },
   {
     category: "sofa",
@@ -820,7 +820,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$170",
+    actualPrice: 170,
   },
   {
     category: "sofa",
@@ -830,7 +830,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 120,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "sofa",
@@ -840,7 +840,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 70,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "sofa",
@@ -850,7 +850,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "sofa",
@@ -860,7 +860,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "Table",
@@ -870,7 +870,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 120,
-    actualPrice: "$160",
+    actualPrice: 160,
   },
   {
     category: "Table",
@@ -880,7 +880,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 80,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "Table",
@@ -890,7 +890,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$160",
+    actualPrice: 160,
   },
   {
     category: "Table",
@@ -900,7 +900,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Table",
@@ -910,7 +910,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Table",
@@ -920,7 +920,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Table",
@@ -930,7 +930,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Table",
@@ -940,7 +940,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Dinning Chair",
@@ -950,7 +950,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$90",
+    actualPrice: 90,
   },
   {
     category: "Dinning Chair",
@@ -960,7 +960,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Dinning Chair",
@@ -970,7 +970,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 80,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Dinning Chair",
@@ -980,7 +980,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 70,
-    actualPrice: "$120",
+    actualPrice: 120,
   },
   {
     category: "Dinning Chair",
@@ -990,7 +990,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Dinning Chair",
@@ -1000,7 +1000,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 80,
-    actualPrice: "$130",
+    actualPrice: 130,
   },
   {
     category: "Dinning Chair",
@@ -1010,7 +1010,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Dinning Chair",
@@ -1020,7 +1020,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Dinning Table",
@@ -1030,7 +1030,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Dinning Table",
@@ -1040,7 +1040,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 60,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Dinning Table",
@@ -1050,7 +1050,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 120,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Dinning Table",
@@ -1060,7 +1060,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 200,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Dinning Table",
@@ -1070,7 +1070,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 120,
-    actualPrice: "$160",
+    actualPrice: 160,
   },
   {
     category: "Dinning Table",
@@ -1080,7 +1080,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 120,
-    actualPrice: "$170",
+    actualPrice: 170,
   },
   {
     category: "Dinning Table",
@@ -1090,7 +1090,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$200",
+    actualPrice: 200,
   },
   {
     category: "Dinning Table",
@@ -1100,7 +1100,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 130,
-    actualPrice: "$170",
+    actualPrice: 170,
   },
   {
     category: "Dinning Table",
@@ -1110,7 +1110,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 170,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "Dinning Table",
@@ -1120,7 +1120,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$130",
+    actualPrice: 130,
   },
   {
     category: "Dinning Cabinet",
@@ -1130,7 +1130,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 470,
-    actualPrice: "$510",
+    actualPrice: 510,
   },
   {
     category: "Dinning Cabinet",
@@ -1140,7 +1140,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 310,
-    actualPrice: "$348",
+    actualPrice: 348,
   },
   {
     category: "Dinning Cabinet",
@@ -1150,7 +1150,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 370,
-    actualPrice: "$400",
+    actualPrice: 400,
   },
   {
     category: "Dinning Cabinet",
@@ -1160,7 +1160,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 400,
-    actualPrice: "$450",
+    actualPrice: 450,
   },
   {
     category: "Dinning Cabinet",
@@ -1170,7 +1170,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1180,7 +1180,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 200,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "Office Chair",
@@ -1190,7 +1190,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1200,7 +1200,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1210,7 +1210,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1220,7 +1220,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1230,7 +1230,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1240,7 +1240,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1250,7 +1250,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1260,7 +1260,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1270,7 +1270,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1280,7 +1280,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   // {
   //   category: "Office Chair",
@@ -1290,7 +1290,7 @@ let allItemsData = [
   //   description:
   //     "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
   //   price: 280,
-  //   actualPrice: "$330",
+  //   actualPrice: 330,
   // },
   {
     category: "Office Chair",
@@ -1300,7 +1300,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1310,7 +1310,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1320,7 +1320,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Chair",
@@ -1330,7 +1330,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 280,
-    actualPrice: "$330",
+    actualPrice: 330,
   },
   {
     category: "Office Desk",
@@ -1340,7 +1340,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 200,
-    actualPrice: "$230",
+    actualPrice: 230,
   },
   {
     category: "Office Desk",
@@ -1350,7 +1350,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$210",
+    actualPrice: 210,
   },
   {
     category: "Office Desk",
@@ -1360,7 +1360,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 170,
-    actualPrice: "$210",
+    actualPrice: 210,
   },
   {
     category: "Office Desk",
@@ -1370,7 +1370,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 190,
-    actualPrice: "$250",
+    actualPrice: 250,
   },
   {
     category: "Isla Stand",
@@ -1380,7 +1380,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "210",
+    actualPrice: 10,
   },
   {
     category: "Office Desk",
@@ -1390,7 +1390,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 160,
-    actualPrice: "180",
+    actualPrice: 80,
   },
   {
     category: "Office Desk",
@@ -1400,7 +1400,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: "$200",
+    actualPrice: 200,
   },
   {
     category: "Office Desk",
@@ -1410,7 +1410,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Office Shelves",
@@ -1420,7 +1420,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Office Shelves",
@@ -1430,7 +1430,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Office Shelves",
@@ -1440,7 +1440,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Office Shelves",
@@ -1450,7 +1450,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Office Shelves",
@@ -1460,7 +1460,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Office Shelves",
@@ -1470,7 +1470,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Office Shelves",
@@ -1480,7 +1480,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "LIGHTS",
@@ -1490,7 +1490,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "LIGHTS",
@@ -1500,7 +1500,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "LIGHTS",
@@ -1510,7 +1510,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "LIGHTS",
@@ -1520,7 +1520,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "LIGHTS",
@@ -1530,7 +1530,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "LIGHTS",
@@ -1540,7 +1540,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "LIGHTS",
@@ -1550,7 +1550,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "LIGHTS",
@@ -1560,7 +1560,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Pillows",
@@ -1570,7 +1570,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Pillows",
@@ -1580,7 +1580,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Pillows",
@@ -1590,7 +1590,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$130",
+    actualPrice: 130,
   },
   {
     category: "Pillows",
@@ -1600,7 +1600,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
-    actualPrice: "$70",
+    actualPrice: 70,
   },
   {
     category: "Pillows",
@@ -1610,7 +1610,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 60,
-    actualPrice: "$100",
+    actualPrice: 100,
   },
   {
     category: "Pillows",
@@ -1620,7 +1620,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 70,
-    actualPrice: "$130",
+    actualPrice: 130,
   },
   {
     category: "square PIllow",
@@ -1630,7 +1630,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Pillows",
@@ -1640,7 +1640,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Throw",
@@ -1650,7 +1650,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Throw",
@@ -1660,7 +1660,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Throw",
@@ -1670,7 +1670,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Throw",
@@ -1680,7 +1680,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Throw",
@@ -1690,7 +1690,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Throw",
@@ -1700,7 +1700,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Throw",
@@ -1710,7 +1710,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "Throw",
@@ -1720,7 +1720,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 100,
-    actualPrice: "$150",
+    actualPrice: 150,
   },
   {
     category: "KITCHEN",
@@ -1730,7 +1730,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 300,
-    actualPrice: "$350",
+    actualPrice: 350,
   },
   {
     category: "KITCHEN",
@@ -1740,7 +1740,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 200,
-    actualPrice: "$260",
+    actualPrice: 260,
   },
   {
     category: "KITCHEN",
@@ -1750,7 +1750,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 450,
-    actualPrice: "$630",
+    actualPrice: 630,
   },
   {
     category: "KITCHEN",
@@ -1760,7 +1760,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 300,
-    actualPrice: "$350",
+    actualPrice: 350,
   },
   {
     category: "KITCHEN",
@@ -1770,7 +1770,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 400,
-    actualPrice: "$450",
+    actualPrice: 450,
   },
   {
     category: "KITCHEN",
@@ -1780,7 +1780,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 300,
-    actualPrice: "$350",
+    actualPrice: 350,
   },
   {
     category: "KITCHEN",
@@ -1790,7 +1790,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 1350,
-    actualPrice: "$1850",
+    actualPrice: 185,
   },
   {
     category: "KITCHEN",
@@ -1800,7 +1800,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 600,
-    actualPrice: "$800",
+    actualPrice: 800,
   },
 ];
 

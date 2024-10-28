@@ -1,9 +1,11 @@
 import paymentLogo from "../assets/cardir.png";
 import paymentLogo2 from "../assets/pay.png";
+import ScrollTop from "./ScrollTop";
 
 const CheckoutPayment = () => {
   return (
     <>
+    <ScrollTop />
       <div className="flex flex-col gap-2">
         <div>
           <h2 className="font-bold text-[18px]">

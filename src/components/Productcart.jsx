@@ -35,7 +35,7 @@ const Productcart = ({ showCart, handleFunction }) => {
       <div
         className={`${
           showCart
-            ? "fixed bg-slate-800 overflow-y-auto overflow-x-hidden h-full w-[370px] z-50 right-0 flex flex-col px-2"
+            ? "fixed bg-slate-800 overflow-y-auto overflow-x-hidden h-full w-[500px] z-50 right-0 flex flex-col px-2"
             : "right-[-100px]"
         }`}
       >
@@ -49,7 +49,7 @@ const Productcart = ({ showCart, handleFunction }) => {
         </div>
         <div
           className={`${
-            showCart ? "overflow-y-auto mt-[60px] pb-[120px]" : "hidden"
+            showCart ? "overflow-y-auto custom-scrollbar mt-[60px] pb-[105px]" : "hidden"
           }`}
         >
           {Array.isArray(addToCartProducts) && addToCartProducts.length > 0 ? (
@@ -121,7 +121,7 @@ const Productcart = ({ showCart, handleFunction }) => {
               SUBTOTAL{" "}
               <span className="font-semibold text-white">${totalAmout}</span>
             </p>
-            <Link to="/checkoutEmail" onClick={handleFunction}>
+            <Link to="/ProductPaymentCheckout" onClick={handleFunction}>
               <button className="text-white bg-green-500 rounded px-6 py-2 hover:bg-black">
                 Checkout
               </button>

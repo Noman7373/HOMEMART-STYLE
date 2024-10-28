@@ -1,23 +1,31 @@
 import { styled, keyframes } from "styled-components";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import EmailCheckout from "./EmailCheckout.jsx";
 import CheckoutAddress from "./CheckoutAddress.jsx";
 import { useSelector } from "react-redux";
 import CheckoutPayment from "./CheckoutPayment.jsx";
-// import img2 from "../assets/Bedroom/bed/baby-bed.avif";
+import ScrollTop from "./ScrollTop.jsx";
 
 const CheckoutEmail = () => {
-  const navigate = useNavigate();
   // fetchItems from Cart
   const cartProducts = useSelector((state) => state.cart.data);
-  // console.log(cartProducts);
+
+  let actualPrice = cartProducts.map((items) => items.actualPrice);
+
+  let modifiedPrice = actualPrice.map((price) => Number(price.slice(1)));
+
+  const cartActualPrice = modifiedPrice.reduce((acc, items) => acc + items, 0);
+
+  // CustomerTotal PRice
   const cartTotalPrice = cartProducts.reduce(
     (acc, items) => acc + items.price * items.quantity,
     0
   );
-  console.log(cartTotalPrice);
+
+  // FinalCustomer Saved Price
+  let savedPrice = Math.abs(cartTotalPrice - cartActualPrice);
 
   let arr = [1, 2, 3];
   const [currStep, setCurrStep] = useState(arr[0]);
@@ -35,12 +43,10 @@ const CheckoutEmail = () => {
     setCurrStep((prev) => prev + 1);
     setPercentageStart(percentageCompleted);
     setPercentageCompleted((prev) => prev + eachStepPercentage);
-    if (currStep.length === 2) {
-      navigate("/checkOutAddress");
-    }
   };
   return (
     <>
+      <ScrollTop />
       <div className="w-full flex flex-col mx-auto h-[1048px] md:flex-row">
         <div className="px-5 flex flex-col pt-5 md:w-[750px]">
           <div className="flex flex-col gap-6">
@@ -84,22 +90,24 @@ const CheckoutEmail = () => {
                 3:Payment
               </p>
             </div>
-            {currStep == 1 ? (
+            {currStep === 1 ? (
               <EmailCheckout />
             ) : currStep === 2 ? (
               <CheckoutAddress />
             ) : (
               <CheckoutPayment />
             )}
-            {/* <Link to="/checkoutAddress"> */}
             <button
               type="submit"
               className="px-4 py-3 text-white bg-black rounded hover:bg-gray-500 max-w-52"
               onClick={nextStepHandler}
             >
-              Proceed To Shipping
+              {currStep === 1
+                ? "Proceed To Shipping"
+                : currStep === 2
+                ? "Continue To Payment"
+                : "Complete Payment"}
             </button>
-            {/* </Link> */}
           </div>
         </div>
         <div className="bg-[#F1F5F9] relative h-full w-[520px]">
@@ -164,7 +172,7 @@ const CheckoutEmail = () => {
                 <p className="text-[#476293] text-[18px]">$20.00</p>
               </span>
               <span className="flex justify-between items-center">
-                <p className="text-[#476293] text-[18px]">Salels Tax:</p>
+                <p className="text-[#476293] text-[18px]">Sales Tax:</p>
                 <p className="text-[#476293] text-[18px]">$8.00</p>
               </span>
               <hr className="h-1 bg-gray-500 border-0 rounded" />
@@ -174,7 +182,7 @@ const CheckoutEmail = () => {
               </div>
               <div className="flex justify-between flex-row font-semibold">
                 <p className="text-red-500">You saved:</p>
-                <p className="text-red-500">$</p>
+                <p className="text-red-500">${savedPrice}</p>
               </div>
             </div>
           </div>

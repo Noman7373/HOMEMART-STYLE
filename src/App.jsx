@@ -115,7 +115,7 @@ function App() {
       element: <Main />,
     },
     {
-      path: "/checkOutEmail",
+      path: "/ProductPaymentCheckout",
       element: <CheckoutEmail />,
     },
     {
