@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const ProtecRoutes = ({ children }) => {
   const navigate = useNavigate();
   const { token } = userAuth();
-  console.log(token);
 
   useEffect(() => {
     // Check for the token on initial mount

@@ -18,9 +18,7 @@ const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
 
   const { token } = userAuth();
-  // const addToCartProductQuantity = useSelector((state) => state.cart.data);
 
-  //Handle Side Menu for small Screen
   function handleShowMenu() {
     setShowMenu((prev) => !prev);
   }

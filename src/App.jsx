@@ -116,15 +116,27 @@ function App() {
     },
     {
       path: "/ProductPaymentCheckout",
-      element: <CheckoutEmail />,
+      element: (
+        <ProtecRoutes>
+          <CheckoutEmail />,
+        </ProtecRoutes>
+      ),
     },
     {
       path: "/checkOutAddress",
-      element: <CheckoutAddress />,
+      element: (
+        <ProtecRoutes>
+          <CheckoutAddress />,
+        </ProtecRoutes>
+      ),
     },
     {
       path: "/checkoutPayment",
-      element: <CheckoutPayment />,
+      element: (
+        <ProtecRoutes>
+          <CheckoutPayment />,
+        </ProtecRoutes>
+      ),
     },
   ]);
 

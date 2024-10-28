@@ -7,14 +7,16 @@ import CheckoutAddress from "./CheckoutAddress.jsx";
 import { useSelector } from "react-redux";
 import CheckoutPayment from "./CheckoutPayment.jsx";
 import ScrollTop from "./ScrollTop.jsx";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutEmail = () => {
+  const navigate = useNavigate();
   // fetchItems from Cart
   const cartProducts = useSelector((state) => state.cart.data);
 
   let actualPrice = cartProducts.map((items) => items.actualPrice);
 
-  let modifiedPrice = actualPrice.map((price) => Number(price.slice(1)));
+  let modifiedPrice = actualPrice.map((price) => price);
 
   const cartActualPrice = modifiedPrice.reduce((acc, items) => acc + items, 0);
 
@@ -44,6 +46,20 @@ const CheckoutEmail = () => {
     setPercentageStart(percentageCompleted);
     setPercentageCompleted((prev) => prev + eachStepPercentage);
   };
+
+  const handlePaymentSuccess = () => {
+    alert("Payment has been succussfully Thank You to join us");
+    navigate("/");
+  };
+
+  const handleStepChange = () => {
+    if (currStep === 1 || currStep === 2) {
+      nextStepHandler();
+    } else {
+      handlePaymentSuccess();
+    }
+  };
+
   return (
     <>
       <ScrollTop />
@@ -100,7 +116,7 @@ const CheckoutEmail = () => {
             <button
               type="submit"
               className="px-4 py-3 text-white bg-black rounded hover:bg-gray-500 max-w-52"
-              onClick={nextStepHandler}
+              onClick={handleStepChange}
             >
               {currStep === 1
                 ? "Proceed To Shipping"
@@ -178,11 +194,13 @@ const CheckoutEmail = () => {
               <hr className="h-1 bg-gray-500 border-0 rounded" />
               <div className="flex justify-between flex-row font-semibold">
                 <p className="text-[20px]">Total</p>
-                <p className="text-[20px]">${cartTotalPrice + 28}</p>
+                <p className="text-[20px]">
+                  ${Number(cartTotalPrice + 28).toFixed(2)}
+                </p>
               </div>
               <div className="flex justify-between flex-row font-semibold">
                 <p className="text-red-500">You saved:</p>
-                <p className="text-red-500">${savedPrice}</p>
+                <p className="text-red-500">${savedPrice.toFixed(2)}</p>
               </div>
             </div>
           </div>
@@ -204,8 +222,8 @@ const progress = (percentageStart, percentageCompleted) => keyframes`
 `;
 
 const ProgressLineInner = styled.div`
-  height: 2px;
-  background-color: rgb(0, 174, 255);
+  height: 3px;
+  background-color: rgb(0, 175, 255);
   display: flex;
   align-items: center;
   animation: ${(props) =>

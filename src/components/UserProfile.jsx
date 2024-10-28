@@ -6,7 +6,7 @@ import { toast } from "react-toastify"; // Import toast directly
 
 const UserProfile = () => {
   const navigate = useNavigate();
-  const { userLogOut } = userAuth(); // Assuming `user` contains name and email
+  const { userLogOut, Email } = userAuth();
   const handleLogOut = () => {
     userLogOut();
     toast.success("Logout successfully", {
@@ -32,11 +32,11 @@ const UserProfile = () => {
 
             <div className="flex flex-col justify-start items-start gap-8">
               <h1>My Profile</h1>
+              {/* <p className="flex justify-center items-center gap-2">
+                Name: <strong>{user}</strong>
+              </p> */}
               <p className="flex justify-center items-center gap-2">
-                Name: <strong>{"Noman"}</strong>
-              </p>
-              <p className="flex justify-center items-center gap-2">
-                Email: <span>{"example@domain.com"}</span>
+                Email: <span className="font-semibold">{Email}</span>
               </p>
               <button
                 className="flex justify-center items-center gap-2 px-4 py-2 bg-orange-500 rounded text-white font-semibold hover:text-orange-900"

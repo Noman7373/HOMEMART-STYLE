@@ -46,7 +46,7 @@ const CheckoutAddress = () => {
               className="outline-0 py-1"
             />
           </div>
-          <div className="flex flex-col w-full p-2 border border-slate-300 rounded">
+          {/* <div className="flex flex-col w-full p-2 border border-slate-300 rounded">
             <label htmlFor="City">City *</label>
             <input
               id="City"
@@ -56,10 +56,10 @@ const CheckoutAddress = () => {
               required
               className="outline-0 py-1"
             />
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="flex flex-col border border-slate-300 p-2 w-full rounded">
+            {/* <div className="flex flex-col border border-slate-300 p-2 w-full rounded">
               <label htmlFor="Apartment">Apartment</label>
               <input
                 type="Apartment"
@@ -69,8 +69,8 @@ const CheckoutAddress = () => {
                 required
                 className="outline-0"
               />
-            </div>
-            <div className="flex flex-col border border-slate-300 p-2 w-full rounded">
+            </div> */}
+            {/* <div className="flex flex-col border border-slate-300 p-2 w-full rounded">
               <label htmlFor="Company">Company</label>
               <input
                 type="text"
@@ -79,8 +79,8 @@ const CheckoutAddress = () => {
                 placeholder="....."
                 className="outline-0"
               />
-            </div>
-            <div className="flex flex-col border border-slate-300 p-2 w-full rounded">
+            </div> */}
+            {/* <div className="flex flex-col border border-slate-300 p-2 w-full rounded">
               <label htmlFor="State">State *</label>
               <input
                 type="Apartment"
@@ -100,9 +100,9 @@ const CheckoutAddress = () => {
                 placeholder="0432"
                 className="outline-0"
               />
-            </div>
+            </div> */}
           </div>
-          <div className="flex flex-col w-full p-2 border border-slate-300 rounded">
+          {/* <div className="flex flex-col w-full p-2 border border-slate-300 rounded">
             <label htmlFor="Phone">Phone (delivery contact) *</label>
             <input
               id="Phone"
@@ -112,7 +112,7 @@ const CheckoutAddress = () => {
               required
               className="outline-0"
             />
-          </div>
+          </div> */}
         </form>
       </div>
     </>

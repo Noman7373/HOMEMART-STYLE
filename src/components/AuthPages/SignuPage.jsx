@@ -4,8 +4,10 @@ import { IoEyeOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { signUpUser } from "../../Api/Query/userQuery";
 import { toast } from "react-toastify";
+import userAuth from "../../customHook/userAuth";
 
 const SignuPage = () => {
+  // const { userLogIn } = userAuth();
   const [errors, setErrors] = useState({});
 
   const navigate = useNavigate();
@@ -58,8 +60,10 @@ const SignuPage = () => {
           tc: formValues.tc,
         });
         const token = response.data.token;
+
         if (token) {
           navigate("/login");
+
           toast.success("Signup successfully", {
             autoClose: 3000,
             hideProgressBar: false,
@@ -68,14 +72,24 @@ const SignuPage = () => {
             draggable: true,
             theme: "light",
           });
+        } else {
+          let errorResponse = JSON.parse(response.request.response);
+          let getError = errorResponse.message;
+          toast.error(`${getError}`, {
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            draggable: true,
+            theme: "light",
+          });
         }
       } catch (error) {
-        toast.error(`${error}`, {
+        toast.error("Signup Field", {
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
           draggable: true,
-          theme: "red",
+          theme: "light",
         });
       }
     }

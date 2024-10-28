@@ -4,7 +4,8 @@ import { IoEyeOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { signinUser } from "../../Api/Query/userQuery";
 import userAuth from "../../customHook/userAuth";
-import { Slide, toast } from "react-toastify";
+import { toast } from "react-toastify";
+
 
 const LoginPage = () => {
   const { userLogIn } = userAuth();
@@ -26,13 +27,12 @@ const LoginPage = () => {
       const token = response.token;
 
       if (token) {
-        userLogIn(token);
+        userLogIn(token, email);
         navigate("/profile");
         toast.success("Login Successfully", {
           autoClose: 3000,
           hideProgressBar: false,
-          closeOnClick: true,
-
+          // closeOnClick: true,
           draggable: true,
           theme: "light",
         });

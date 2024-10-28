@@ -1380,7 +1380,7 @@ let allItemsData = [
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 150,
-    actualPrice: 10,
+    actualPrice: 200,
   },
   {
     category: "Office Desk",
