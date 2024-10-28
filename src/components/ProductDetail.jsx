@@ -2,8 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addProductWishList, addToCart } from "../store/cartslice";
+import userAuth from "../customHook/userAuth";
 
 const ProductDetail = () => {
+  const { Toast } = userAuth();
   const { id } = useParams();
   const dispatch = useDispatch();
 
@@ -35,12 +37,14 @@ const ProductDetail = () => {
       quantity: 1,
     };
     dispatch(addToCart(addToCartItems));
+    Toast(`${name} Added to Cart`);
   }
 
   // handle Wishlist products
   function handleWishList(id, name, img, price, actualPrice) {
     let favProducts = { id, name, img, price, actualPrice };
     dispatch(addProductWishList(favProducts));
+    Toast(`${name} Added to WishList`);
   }
 
   return (

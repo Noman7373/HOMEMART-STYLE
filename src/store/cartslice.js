@@ -170,6 +170,7 @@ import img160 from "../assets/Kitchen/kitchen4.avif";
 import img161 from "../assets/Kitchen/kitchen5.avif";
 import img162 from "../assets/Kitchen/kitchen6.avif";
 import img163 from "../assets/Kitchen/kitchen7.avif";
+import { toast } from "react-toastify";
 
 let allItemsData = [
   {
@@ -1803,6 +1804,7 @@ let allItemsData = [
     actualPrice: 800,
   },
 ];
+
 
 let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 let wishListProduct = JSON.parse(localStorage.getItem("Wishlist")) || [];

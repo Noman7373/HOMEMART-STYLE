@@ -6,7 +6,6 @@ import { signinUser } from "../../Api/Query/userQuery";
 import userAuth from "../../customHook/userAuth";
 import { toast } from "react-toastify";
 
-
 const LoginPage = () => {
   const { userLogIn } = userAuth();
   const navigate = useNavigate();
@@ -30,16 +29,24 @@ const LoginPage = () => {
         userLogIn(token, email);
         navigate("/profile");
         toast.success("Login Successfully", {
-          autoClose: 3000,
+          autoClose: 1000,
           hideProgressBar: false,
-          // closeOnClick: true,
+          draggable: true,
+          theme: "light",
+        });
+      } else {
+        toast.error(`${response.message}`, {
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
           draggable: true,
           theme: "light",
         });
       }
     } catch (error) {
       toast.error(`${error}`, {
-        autoClose: 1000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

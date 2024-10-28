@@ -7,8 +7,11 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
+import userAuth from "../customHook/userAuth";
+
 const Bestsellers = () => {
   const dispatch = useDispatch();
+  const {Toast} = userAuth()
 
   // Get Data from Cartslice store
   const allBestProducts = useSelector((state) => state.cart.allProducts);
@@ -33,12 +36,14 @@ const Bestsellers = () => {
       quantity: 1,
     };
     dispatch(addToCart(products));
+    Toast(`${name} Added to Cart`);
   }
 
   // Handle Wishlist Products
   function handleWishList(id, name, img, price, actualPrice) {
     let favProducts = { id, name, img, price, actualPrice };
     dispatch(addProductWishList(favProducts));
+    Toast(`${name} Added to WishList`);
   }
   return (
     <>

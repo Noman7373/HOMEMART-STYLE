@@ -6,7 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProductWishList, addToCart } from "../store/cartslice";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import userAuth from "../customHook/userAuth";
 const DecorProduct = () => {
+  const { Toast } = userAuth();
   const [input, setinputValue] = useState("Lights");
   const dispatch = useDispatch();
   // Get Data from Cartslice store
@@ -27,12 +29,14 @@ const DecorProduct = () => {
       quantity: 1,
     };
     dispatch(addToCart(products));
+    Toast(`${name} Added to Cart`);
   }
 
   // Handle Wishlist Products
   function handleWishList(id, name, img, price, actualPrice) {
     let favProducts = { id, name, img, price, actualPrice };
     dispatch(addProductWishList(favProducts));
+    Toast(`${name} Added to WishList`);
   }
   const handleFilter = (e) => {
     let inputValue = e.target.value;

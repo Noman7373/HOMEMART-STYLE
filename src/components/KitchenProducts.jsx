@@ -6,6 +6,8 @@ import { addProductWishList, addToCart } from "../store/cartslice";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import userAuth from "../customHook/userAuth";
+const { Toast } = userAuth();
 
 const KitchenProducts = () => {
   const dispatch = useDispatch();
@@ -32,12 +34,14 @@ const KitchenProducts = () => {
       quantity: 1,
     };
     dispatch(addToCart(products));
+    Toast(`${name} Added to Cart`);
   }
 
   // handle Wishlist products
   function handleWishList(id, name, img, price, actualPrice) {
     let favProducts = { id, name, img, price, actualPrice };
     dispatch(addProductWishList(favProducts));
+    Toast(`${name} Added to WishList`);
   }
   return (
     <>

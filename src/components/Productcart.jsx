@@ -7,8 +7,11 @@ import {
   removeItemCart,
 } from "../store/cartslice";
 import { Link } from "react-router-dom";
+import userAuth from "../customHook/userAuth";
+
 
 const Productcart = ({ showCart, handleFunction }) => {
+  const { Toast } = userAuth();
   const addToCartProducts = useSelector((state) => state.cart.data);
 
   // Subtotal of All addtocard items
@@ -21,6 +24,7 @@ const Productcart = ({ showCart, handleFunction }) => {
 
   const handleRemoveItems = (id) => {
     dispatch(removeItemCart(id));
+    Toast(`Item removed from Cart`);
   };
 
   function handleIncreament(id) {
@@ -49,7 +53,9 @@ const Productcart = ({ showCart, handleFunction }) => {
         </div>
         <div
           className={`${
-            showCart ? "overflow-y-auto custom-scrollbar mt-[60px] pb-[105px]" : "hidden"
+            showCart
+              ? "overflow-y-auto custom-scrollbar mt-[60px] pb-[105px]"
+              : "hidden"
           }`}
         >
           {Array.isArray(addToCartProducts) && addToCartProducts.length > 0 ? (

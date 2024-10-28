@@ -7,9 +7,10 @@ const userAuth = () => {
   if (context === undefined || context === null) {
     throw new Error("useData must be used within a ProductsProvider");
   }
-  const { user, Email, token, userLogIn, userLogOut } = context;
+  const { Toast, user, Email, token, userLogIn, userLogOut } = context;
 
   return {
+    Toast,
     user,
     Email,
     token,

@@ -2,6 +2,7 @@ import { setupListeners } from "@reduxjs/toolkit/query";
 import { jwtDecode } from "jwt-decode";
 import { createContext, useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
+import { toast } from "react-toastify";
 
 export const AuthProvider = createContext();
 
@@ -56,9 +57,21 @@ export const UserAuthProvider = ({ children }) => {
     removeCookies("jwt", { path: "/" });
   };
 
+  // using Toast
+  const Toast = (name) => [
+    toast.success(`${name}`, {
+      autoClose: true,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+    }),
+  ];
+
   return (
     <AuthProvider.Provider
-      value={{ user, Email, token, userLogIn, userLogOut }}
+      value={{ Toast, user, Email, token, userLogIn, userLogOut }}
     >
       {children}
     </AuthProvider.Provider>

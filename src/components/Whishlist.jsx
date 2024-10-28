@@ -2,6 +2,7 @@ import React from "react";
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 import { removeProductsWishList } from "../store/cartslice";
+import { toast } from "react-toastify";
 
 const Whishlist = ({ showWishList, handleWishListFunction }) => {
   const dispatch = useDispatch();
@@ -9,6 +10,14 @@ const Whishlist = ({ showWishList, handleWishListFunction }) => {
 
   const handleRemoveItems = (id) => {
     dispatch(removeProductsWishList(id));
+    toast.success("Item Remove from WishList", {
+      autoClose: true,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+    });
   };
   return (
     <>
