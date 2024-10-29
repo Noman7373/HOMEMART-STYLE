@@ -23,7 +23,7 @@ import ProtecRoutes from "./components/AuthProtector/ProtecRoutes";
 
 import CheckoutAddress from "./components/CheckoutAddress";
 import CheckoutEmail from "./components/CheckoutEmail";
-import CheckoutPayment from "./components/CheckoutPayment";
+import Footer from "./components/Footer";
 
 function App() {
   const router = createBrowserRouter([
@@ -118,7 +118,10 @@ function App() {
       path: "/ProductPaymentCheckout",
       element: (
         <ProtecRoutes>
-          <CheckoutEmail />,
+          <>
+            <CheckoutEmail />,
+            <Footer />
+          </>
         </ProtecRoutes>
       ),
     },
@@ -126,18 +129,24 @@ function App() {
       path: "/checkOutAddress",
       element: (
         <ProtecRoutes>
-          <CheckoutAddress />,
+          <>
+            <CheckoutAddress />,
+            <Footer />
+          </>
         </ProtecRoutes>
       ),
     },
-    {
-      path: "/checkoutPayment",
-      element: (
-        <ProtecRoutes>
-          <CheckoutPayment />,
-        </ProtecRoutes>
-      ),
-    },
+    // {
+    //   path: "/checkoutPayment",
+    //   element: (
+    //     <ProtecRoutes>
+    //       <>
+    //         <CheckoutPayment />,
+    //         <Footer />
+    //       </>
+    //     </ProtecRoutes>
+    //   ),
+    // },
   ]);
 
   return (

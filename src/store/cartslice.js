@@ -1873,8 +1873,8 @@ const cartSlice = createSlice({
       );
       localStorage.setItem("Wishlist", JSON.stringify(state.userFavProducts));
     },
-    nextStep(state, action) {
-      (state.progressSteps += action.payload),
+    nextStep(state) {
+      (state.progressSteps += 1),
         (state.percentageCompleted += eachStepPercentage);
     },
     prevStep(state) {

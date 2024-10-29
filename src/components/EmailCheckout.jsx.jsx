@@ -1,12 +1,13 @@
 import React from "react";
 import userAuth from "../customHook/userAuth";
+import { Link } from "react-router-dom";
 
 const EmailCheckout = () => {
   const { Email } = userAuth();
   return (
     <>
-      <h2 className="md:text-[20px] ">Hi there, Start Your Checkout here.</h2>
-      <div className="flex flex-col p-4 border border-gray-400">
+      <div className="flex flex-col gap-4 p-4 pl-4 border border-gray-400  rounded">
+        <h2 className="md:text-[20px]">Hi there, Start Your Checkout here.</h2>
         <label htmlFor="email" className="font-bold">
           Email:
         </label>
@@ -19,6 +20,8 @@ const EmailCheckout = () => {
           className="outline-0 bg-[#FAFAFA] text-black text-[15px]"
         />
       </div>
+
+     
     </>
   );
 };

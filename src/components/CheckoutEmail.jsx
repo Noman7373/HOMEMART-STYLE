@@ -1,6 +1,6 @@
 import { styled, keyframes } from "styled-components";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import EmailCheckout from "./EmailCheckout.jsx";
 import CheckoutAddress from "./CheckoutAddress.jsx";
@@ -13,84 +13,65 @@ import { nextStep, resetCheckOut } from "../store/cartslice.js";
 const CheckoutEmail = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [showCartProduct, setShowCartProduct] = useState(false);
+
+  //getingData from store
   const { percentageCompleted, progressSteps } = useSelector(
     (state) => state.cart
   );
-  let arr = [1, 2, 3];
-  const [steps, setStep] = useState(progressSteps);
-  const [showCartProduct, setShowCartProduct] = useState(false);
+
   // fetchItems from Cart
   const cartProducts = useSelector((state) => state.cart.data);
-
-  // console.log(progressSteps);
 
   let actualPrice = cartProducts.map((items) => items.actualPrice);
 
   let modifiedPrice = actualPrice.map((price) => price);
 
-  const cartActualPrice = modifiedPrice.reduce((acc, items) => acc + items, 0);
+  let cartActualPrice = modifiedPrice.reduce((acc, items) => acc + items, 0);
 
-  // CustomerTotal PRice
+  // CustomerTotal Price
   const cartTotalPrice = cartProducts.reduce(
     (acc, items) => acc + items.price * items.quantity,
     0
   );
 
-  // FinalCustomer Saved Price
   let savedPrice = Math.abs(cartTotalPrice - cartActualPrice);
 
+  /// array for progress bar
+  let arr = [1, 2, 3];
+
+  // handleCartList Show
   const handleCartItemShow = () => {
     setShowCartProduct((prev) => !prev);
   };
 
+  // handle Progrss Bar
   const nextStepHandler = () => {
-    setStep((prev) => {
-      const newStep = prev + 1;
-      dispatch(nextStep(newStep));
-      return newStep;
-    });
-    console.log(steps);
-  };
-
-  useEffect(() => {
-    setStep(progressSteps);
-  }, [progressSteps]);
-
-  const handlePaymentSuccess = () => {
-    alert("Payment has been succussfully Thank You to join us");
-    navigate("/");
-  };
-
-  const handleStepChange = () => {
-    if (steps < 2) {
-      nextStepHandler();
-    } else {
-      handlePaymentSuccess();
-    }
+    dispatch(nextStep());
   };
 
   return (
     <>
       <ScrollTop />
-      <div className="w-full flex flex-col mx-auto h-[1048px] md:flex-row max-[545px]:w-[400px] sm:w-[700px] md:w-full">
+      <div className="w-full flex flex-col mx-auto md:flex-row max-[545px]:w-[400px] sm:w-[700px] md:w-full">
         <div className="px-5 flex flex-col pt-5 md:w-[750px] max-[545px]:w-[400px] xs:w-full">
           <div className="flex flex-col gap-6 xs:mb-3">
             <h1 className="uppercase text-[20px] font-bold">Homemart Style</h1>
-            <div className="md:w-[670px] px-2 h-20 sm:w-[400px] flex flex-col justify-center items-center bg-[rgb(226,232,231)] rounded-3xl bg-[linear-gradient(145deg, #cacaca, #f0f0f0)] shadow-[5px_5px_17px_#b3b3b3,_-5px_-5px_17px_#fff] md:flex-row ">
+            <div className="md:w-[670px] px-2 h-20 sm:w-[560px] flex flex-col justify-center items-center bg-[rgb(226,232,231)] rounded-3xl bg-[linear-gradient(145deg, #cacaca, #f0f0f0)] shadow-[5px_5px_17px_#b3b3b3,_-5px_-5px_17px_#fff] md:flex-row ">
               <div className="w-full sm:w-full h-[4px] bg-[rgb(255,255,255)] flex items-center">
                 <ProgressLineInner
-                  $percentageStart={steps}
+                  $percentageStart={progressSteps}
                   $percentCompleted={percentageCompleted}
                 >
-                  <div className="absolute flex  justify-between xs:w-[345px] md:w-[660px] sm:w-full flex-wrap">
+                  <div className="absolute flex  justify-between xs:w-[345px] md:w-[660px] sm:w-[545px] flex-wrap">
                     {arr.map((items, index) => {
                       return (
                         <div
                           key={index}
                           className={
-                            steps === 0
+                            progressSteps === 0
                               ? "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center outline-custom animation"
-                              : steps === 1
+                              : progressSteps === 1
                               ? "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center outline-custom animationCircleFiled"
                               : "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center"
                           }
@@ -115,9 +96,9 @@ const CheckoutEmail = () => {
                 3:Payment
               </p>
             </div>
-            {steps === 0 ? (
+            {progressSteps === 0 ? (
               <EmailCheckout />
-            ) : steps === 1 ? (
+            ) : progressSteps === 1 ? (
               <CheckoutAddress />
             ) : (
               <CheckoutPayment />
@@ -125,17 +106,17 @@ const CheckoutEmail = () => {
             <button
               type="submit"
               className={`${
-                steps === 0
+                progressSteps === 0
                   ? "px-4 py-3 text-white bg-black rounded hover:bg-gray-500 max-w-52"
-                  : steps === 1
+                  : progressSteps === 1
                   ? "hidden"
                   : "hidden"
               }`}
-              onClick={handleStepChange}
+              onClick={nextStepHandler}
             >
-              {steps === 0
+              {progressSteps === 0
                 ? "Proceed To Shipping"
-                : steps === 2
+                : progressSteps === 2
                 ? "Continue To Payment"
                 : "Complete Payment"}
             </button>
