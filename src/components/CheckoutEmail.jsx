@@ -1,18 +1,28 @@
 import { styled, keyframes } from "styled-components";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import EmailCheckout from "./EmailCheckout.jsx";
 import CheckoutAddress from "./CheckoutAddress.jsx";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CheckoutPayment from "./CheckoutPayment.jsx";
 import ScrollTop from "./ScrollTop.jsx";
 import { useNavigate } from "react-router-dom";
+import { nextStep, resetCheckOut } from "../store/cartslice.js";
 
 const CheckoutEmail = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { percentageCompleted, progressSteps } = useSelector(
+    (state) => state.cart
+  );
+  let arr = [1, 2, 3];
+  const [steps, setStep] = useState(progressSteps);
+  const [showCartProduct, setShowCartProduct] = useState(false);
   // fetchItems from Cart
   const cartProducts = useSelector((state) => state.cart.data);
+
+  // console.log(progressSteps);
 
   let actualPrice = cartProducts.map((items) => items.actualPrice);
 
@@ -29,23 +39,22 @@ const CheckoutEmail = () => {
   // FinalCustomer Saved Price
   let savedPrice = Math.abs(cartTotalPrice - cartActualPrice);
 
-  let arr = [1, 2, 3];
-  const [currStep, setCurrStep] = useState(arr[0]);
-  const [percentageStart, setPercentageStart] = useState(0);
-  const [percentageCompleted, setPercentageCompleted] = useState(0);
-  const [showCartProduct, setShowCartProduct] = useState(false);
-
   const handleCartItemShow = () => {
     setShowCartProduct((prev) => !prev);
   };
 
-  const eachStepPercentage = 100 / arr.length + 14;
-
   const nextStepHandler = () => {
-    setCurrStep((prev) => prev + 1);
-    setPercentageStart(percentageCompleted);
-    setPercentageCompleted((prev) => prev + eachStepPercentage);
+    setStep((prev) => {
+      const newStep = prev + 1;
+      dispatch(nextStep(newStep));
+      return newStep;
+    });
+    console.log(steps);
   };
+
+  useEffect(() => {
+    setStep(progressSteps);
+  }, [progressSteps]);
 
   const handlePaymentSuccess = () => {
     alert("Payment has been succussfully Thank You to join us");
@@ -53,7 +62,7 @@ const CheckoutEmail = () => {
   };
 
   const handleStepChange = () => {
-    if (currStep === 1 || currStep === 2) {
+    if (steps < 2) {
       nextStepHandler();
     } else {
       handlePaymentSuccess();
@@ -70,7 +79,7 @@ const CheckoutEmail = () => {
             <div className="md:w-[670px] px-2 h-20 sm:w-[400px] flex flex-col justify-center items-center bg-[rgb(226,232,231)] rounded-3xl bg-[linear-gradient(145deg, #cacaca, #f0f0f0)] shadow-[5px_5px_17px_#b3b3b3,_-5px_-5px_17px_#fff] md:flex-row ">
               <div className="w-full sm:w-full h-[4px] bg-[rgb(255,255,255)] flex items-center">
                 <ProgressLineInner
-                  $percentageStart={percentageStart}
+                  $percentageStart={steps}
                   $percentCompleted={percentageCompleted}
                 >
                   <div className="absolute flex  justify-between xs:w-[345px] md:w-[660px] sm:w-full flex-wrap">
@@ -79,9 +88,9 @@ const CheckoutEmail = () => {
                         <div
                           key={index}
                           className={
-                            currStep === items
+                            steps === 0
                               ? "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center outline-custom animation"
-                              : currStep > items
+                              : steps === 1
                               ? "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center outline-custom animationCircleFiled"
                               : "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center"
                           }
@@ -106,21 +115,27 @@ const CheckoutEmail = () => {
                 3:Payment
               </p>
             </div>
-            {currStep === 1 ? (
+            {steps === 0 ? (
               <EmailCheckout />
-            ) : currStep === 2 ? (
+            ) : steps === 1 ? (
               <CheckoutAddress />
             ) : (
               <CheckoutPayment />
             )}
             <button
               type="submit"
-              className="px-4 py-3 text-white bg-black rounded hover:bg-gray-500 max-w-52"
+              className={`${
+                steps === 0
+                  ? "px-4 py-3 text-white bg-black rounded hover:bg-gray-500 max-w-52"
+                  : steps === 1
+                  ? "hidden"
+                  : "hidden"
+              }`}
               onClick={handleStepChange}
             >
-              {currStep === 1
+              {steps === 0
                 ? "Proceed To Shipping"
-                : currStep === 2
+                : steps === 2
                 ? "Continue To Payment"
                 : "Complete Payment"}
             </button>

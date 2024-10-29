@@ -1805,9 +1805,10 @@ let allItemsData = [
   },
 ];
 
-
 let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 let wishListProduct = JSON.parse(localStorage.getItem("Wishlist")) || [];
+
+let eachStepPercentage = 100 / 3 + 14;
 
 const cartSlice = createSlice({
   name: "cart",
@@ -1815,6 +1816,12 @@ const cartSlice = createSlice({
     data: cartItems,
     allProducts: allItemsData,
     userFavProducts: wishListProduct,
+    progressSteps: 0,
+    percentageCompleted: 0,
+
+    shippingAddress: {},
+    billingAddress: {},
+    currStep: 0,
   },
   reducers: {
     addToCart(state, action) {
@@ -1866,6 +1873,29 @@ const cartSlice = createSlice({
       );
       localStorage.setItem("Wishlist", JSON.stringify(state.userFavProducts));
     },
+    nextStep(state, action) {
+      (state.progressSteps += action.payload),
+        (state.percentageCompleted += eachStepPercentage);
+    },
+    prevStep(state) {
+      if (state.progressSteps > 0) {
+        state.progressSteps -= 1;
+        state.percentageCompleted -= eachStepPercentage;
+      }
+    },
+    resetCheckOut(state) {
+      (state.progressSteps = 0), (state.percentageCompleted = 0);
+    },
+
+    setShippingAddress(state, action) {
+      state.shippingAddress = action.payload;
+    },
+    setBillingAddress(state, action) {
+      state.billingAddress = action.payload;
+    },
+    setCurrStep(state, action) {
+      state.currStep = action.payload;
+    },
   },
 });
 
@@ -1876,5 +1906,11 @@ export const {
   decreamentQuantity,
   addProductWishList,
   removeProductsWishList,
+  nextStep,
+  prevStep,
+  resetCheckOut,
+  setShippingAddress,
+  setBillingAddress,
+  setCurrStep,
 } = cartSlice.actions;
 export default cartSlice.reducer;
