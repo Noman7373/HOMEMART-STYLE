@@ -1808,7 +1808,7 @@ let allItemsData = [
 let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 let wishListProduct = JSON.parse(localStorage.getItem("Wishlist")) || [];
 
-let eachStepPercentage = 100 / 3 + 14;
+let eachStepPercentage = 100 / 4 + 7;
 
 const cartSlice = createSlice({
   name: "cart",

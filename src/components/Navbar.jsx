@@ -3,21 +3,25 @@ import React, { useState } from "react";
 import { BiMenu, BiSearch } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import Productcart from "./Productcart";
 import Whishlist from "./Whishlist";
 import { TbArrowsCross } from "react-icons/tb";
 import SearchProduct from "./SearchProduct";
 import userAuth from "../customHook/userAuth";
+import { useDispatch } from "react-redux";
 
 const Navbar = () => {
+  const { token, userLogOut } = userAuth();
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [showMenu, setShowMenu] = useState(false);
   const [cartShow, setCartShow] = useState(false);
   const [WishlistShow, setWishlistShow] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-
-  const { token } = userAuth();
 
   function handleShowMenu() {
     setShowMenu((prev) => !prev);
@@ -33,6 +37,13 @@ const Navbar = () => {
   function handleSearch() {
     setShowSearch((prev) => !prev);
   }
+
+  // logOutHandler for small devices
+  const logOutHandler = () => {
+    handleShowMenu();
+    userLogOut();
+    navigate("/login");
+  };
   return (
     <>
       <nav className=" h-24 w-full bg-black flex justify-around text-center items-center text-white shadow-2xl fixed z-20">
@@ -217,16 +228,27 @@ const Navbar = () => {
           >
             <li>Kitchen</li>
           </NavLink>
-          <Link to="/login" onClick={handleShowMenu}>
-            <button className="border border-white p-1 align-middle rounded">
-              Login
+          {!token ? (
+            <div className="flex flex-col gap-3 items-center">
+              <Link to="/login" onClick={handleShowMenu}>
+                <button className="border border-white p-1 align-middle rounded">
+                  Login
+                </button>
+              </Link>
+              <Link to="/signup" onClick={handleShowMenu}>
+                <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold ">
+                  Signin
+                </button>
+              </Link>{" "}
+            </div>
+          ) : (
+            <button
+              className="border border-white p-1 align-middle rounded bg-white text-black font-bold"
+              onClick={logOutHandler}
+            >
+              Logout
             </button>
-          </Link>
-          <Link to="/signup" onClick={handleShowMenu}>
-            <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold ">
-              Signin
-            </button>
-          </Link>
+          )}
         </ul>
       </aside>
     </>

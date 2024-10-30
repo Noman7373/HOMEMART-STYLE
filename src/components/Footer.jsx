@@ -99,7 +99,7 @@ const Footer = () => {
                 to="/contact"
                 className="text-white flex items-center gap-2 text-[20px] hover:text-slate-400"
               >
-                <LiaLinkSolid size={25} /> Contact us
+                <LiaLinkSolid size={25} /> Contact
               </Link>
             </div>
           </div>

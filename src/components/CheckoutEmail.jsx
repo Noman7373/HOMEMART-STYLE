@@ -1,20 +1,19 @@
 import { styled, keyframes } from "styled-components";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import EmailCheckout from "./EmailCheckout.jsx";
 import CheckoutAddress from "./CheckoutAddress.jsx";
 import { useDispatch, useSelector } from "react-redux";
-import CheckoutPayment from "./CheckoutPayment.jsx";
 import ScrollTop from "./ScrollTop.jsx";
 import { useNavigate } from "react-router-dom";
-import { nextStep, resetCheckOut } from "../store/cartslice.js";
+import { nextStep } from "../store/cartslice.js";
 
 const CheckoutEmail = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [showCartProduct, setShowCartProduct] = useState(false);
-
+  let arr = [1, 2, 3, 4];
+  const [barSteps, setBarSteps] = useState(arr[0]);
   //getingData from store
   const { percentageCompleted, progressSteps } = useSelector(
     (state) => state.cart
@@ -38,7 +37,6 @@ const CheckoutEmail = () => {
   let savedPrice = Math.abs(cartTotalPrice - cartActualPrice);
 
   /// array for progress bar
-  let arr = [1, 2, 3];
 
   // handleCartList Show
   const handleCartItemShow = () => {
@@ -46,33 +44,36 @@ const CheckoutEmail = () => {
   };
 
   // handle Progrss Bar
-  const nextStepHandler = () => {
+  const nextStepHandler = useCallback(() => {
+    setBarSteps((prev) => prev + 1);
     dispatch(nextStep());
-  };
+  }, [dispatch]);
 
   return (
     <>
       <ScrollTop />
-      <div className="w-full flex flex-col mx-auto md:flex-row max-[545px]:w-[400px] sm:w-[700px] md:w-full">
+      <div className="w-full flex flex-col mx-auto md:flex-row max-[545px]:w-[370px] sm:w-[700px] md:w-full xs:overflow-x-hidden">
         <div className="px-5 flex flex-col pt-5 md:w-[750px] max-[545px]:w-[400px] xs:w-full">
           <div className="flex flex-col gap-6 xs:mb-3">
             <h1 className="uppercase text-[20px] font-bold">Homemart Style</h1>
             <div className="md:w-[670px] px-2 h-20 sm:w-[560px] flex flex-col justify-center items-center bg-[rgb(226,232,231)] rounded-3xl bg-[linear-gradient(145deg, #cacaca, #f0f0f0)] shadow-[5px_5px_17px_#b3b3b3,_-5px_-5px_17px_#fff] md:flex-row ">
-              <div className="w-full sm:w-full h-[4px] bg-[rgb(255,255,255)] flex items-center">
+              <div className="w-full sm:w-full md:w-full h-[4px] bg-[rgb(255,255,255)] flex items-center">
                 <ProgressLineInner
                   $percentageStart={progressSteps}
                   $percentCompleted={percentageCompleted}
                 >
-                  <div className="absolute flex  justify-between xs:w-[345px] md:w-[660px] sm:w-[545px] flex-wrap">
+                  <div className="absolute flex  justify-between w-full xs:w-[315px] sm:w-[545px] md:w-[655px]">
                     {arr.map((items, index) => {
                       return (
                         <div
                           key={index}
                           className={
-                            progressSteps === 0
+                            barSteps === 1
                               ? "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center outline-custom animation"
-                              : progressSteps === 1
-                              ? "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center outline-custom animationCircleFiled"
+                              : barSteps === 2
+                              ? "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center outline-custom animation "
+                              : barSteps === 3
+                              ? "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center outline-custom animation animationCircleFiled"
                               : "w-[50px] h-[50px] bg-white rounded-[50%] flex items-center justify-center"
                           }
                         >
@@ -96,13 +97,7 @@ const CheckoutEmail = () => {
                 3:Payment
               </p>
             </div>
-            {progressSteps === 0 ? (
-              <EmailCheckout />
-            ) : progressSteps === 1 ? (
-              <CheckoutAddress />
-            ) : (
-              <CheckoutPayment />
-            )}
+            {progressSteps === 0 ? <EmailCheckout /> : <CheckoutAddress />}
             <button
               type="submit"
               className={`${
@@ -114,16 +109,12 @@ const CheckoutEmail = () => {
               }`}
               onClick={nextStepHandler}
             >
-              {progressSteps === 0
-                ? "Proceed To Shipping"
-                : progressSteps === 2
-                ? "Continue To Payment"
-                : "Complete Payment"}
+              Proceed To Shipping
             </button>
           </div>
         </div>
-        <div className="bg-[#F1F5F9] relative h-full w-[520px] max-[545px]:w-[400px] xs:w-[400px] sm:w-full md:w-full">
-          <div className="flex flex-col h-full pt-4 px-5 gap-14 md:w-full xs:w-[400px] sm:w-[600px] max-[500px]:w-[300px]">
+        <div className="bg-[#F1F5F9] relative h-full justify-center items-center w-[520px] max-[545px]:w-[380px] xs:w-[400px] sm:w-full md:w-full">
+          <div className="flex flex-col h-full  pt-4  px-5 gap-14 md:w-full xs:w-[380px] sm:w-[600px] max-[500px]:w-[300px]">
             <div
               className="flex flex-col flex-wrap w-full bg-white p-3 rounded cursor-pointer gap-5 shadow-rgba(39, 39, 43, 0.2) 0px 7px 29px 0px;"
               onClick={() => handleCartItemShow()}
