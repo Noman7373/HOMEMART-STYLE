@@ -11,8 +11,16 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // CORS configuration
+const allowedOrigins = ['http://localhost:5173', 'https://homestylemart.netlify.app/'];
+
 const corsOptions = {
-  origin: process.env.FRONTEND_URL, // Ensure .env has FRONTEND_URL=http://localhost:5173
+  origin: (origin, callback) => {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
 };
 
