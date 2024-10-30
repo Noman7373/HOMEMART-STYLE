@@ -10,11 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-.env
-Backend_Server
-src/Api
-.env
-.gitignore
+
 *.local
 
 # Editor directories and files
