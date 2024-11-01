@@ -68,14 +68,14 @@ const ProductDetail = () => {
             <p className="flex text-[16px] gap-4">
               ${price}
               <span className="line-through text-[16px] text-slate-600">
-                {actualPrice}
+                ${actualPrice}
               </span>
             </p>
             <h3 className="text-[16px] uppercase text-slate-800">
               Description
             </h3>
             <p className="text-[15px] text-slate-600 max-w-[500px]">
-              {description}
+              {description.slice(0, 120)}
             </p>
             <div className="flex flex-row justify-start items-start gap-4 my-5">
               <button
