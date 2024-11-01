@@ -5,22 +5,16 @@ import UserController from "../controllers/userController.js";
 import checkUserAuth from "../middlewares/auth-middleware.js";
 
 // Load environment variables from .env file
-dotenv.config();
+dotenv.config({ path: ".env" });
 
+// let handlCors;
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-// CORS configuration
-const allowedOrigins = ['http://localhost:5173', 'https://homestylemart.netlify.app/'];
-
 const corsOptions = {
-  origin: (origin, callback) => {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: "http://localhost:5173", // Replace with your frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
 };
 
@@ -43,7 +37,6 @@ router.use("/changepassword", checkUserAuth);
 router.use("/loggeduser", checkUserAuth);
 router.post("/changepassword", UserController.changeUserPassword);
 router.get("/loggeduser", UserController.loggedUser);
-
 
 // Apply router under the /api/user path
 app.use("/api/user", router);

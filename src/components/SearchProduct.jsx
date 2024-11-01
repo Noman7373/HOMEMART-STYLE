@@ -110,7 +110,7 @@ const SearchProduct = ({ showSearch, handleSearch }) => {
                           </p>
                           <div className="flex gap-2">
                             <span className="text-slate-400 line-through">
-                              {actualPrice}
+                              ${actualPrice}
                             </span>
                             <p className="text-white font-bold ">${price}</p>
                           </div>
