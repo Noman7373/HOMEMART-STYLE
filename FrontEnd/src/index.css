@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.outline-custom {
+  outline: 3px solid rgb(0, 174, 255); /* Custom outline */
+}
+
+.animation {
+  animation: circleOutline 2s forwards;
+  animation-delay: 0.25s;
+  -webkit-animation: circleOutline 2s forwards;
+}
+
+@keyframes circleOutline {
+  to {
+    ouline: 3px solid rgb(0, 175, 255);
+  }
+}
+
+.animationCircleFiled {
+  animation: CircleFiled 1s forwards;
+  -webkit-animation: CircleFiled 1s forwards;
+}
+
+@keyframes CircleFiled {
+  from {
+    background-color: rgb(255, 255, 255);
+  }
+  to {
+    background-color: rgb(0, 175, 255);
+    color: white;
+  }
+}
+
+
+
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Track color */
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4f46e5; /* Thumb color */
+  border-radius: 4px;
+  border: 2px solid #f0f0f0; /* Adds padding and color to thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #4338ca; /* Darker shade when hovering */
+}
