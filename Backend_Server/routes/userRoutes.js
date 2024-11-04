@@ -12,10 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 const corsOptions = {
-  origin: [
-    "http://localhost:5173",
-    "https://homemart-3g6eculew-noman-ahmeds-projects.vercel.app",
-  ], // Replace with your frontend URL
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
