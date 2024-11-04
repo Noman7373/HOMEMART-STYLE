@@ -9,7 +9,9 @@ const require = createRequire(import.meta.url);
 export default defineConfig({
   envPrefix: "REACT_APP_",
   plugins: [react()],
-
+  build: {
+    outDir: "dist", // Ensure this is set
+  },
   define: {
     "process.env": {}, // Provide an empty object for process.env
   },
