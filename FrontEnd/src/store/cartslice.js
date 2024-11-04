@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 import img1 from "../assets/circleT.avif";
 import img2 from "../assets/cushion1.avif";
 import img3 from "../assets/cushion2.avif";

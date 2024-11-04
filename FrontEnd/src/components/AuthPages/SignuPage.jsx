@@ -7,6 +7,9 @@ import { toast } from "react-toastify";
 import userAuth from "../../customHook/userAuth";
 
 const SignuPage = () => {
+
+  
+
   // const { userLogIn } = userAuth();
   const [errors, setErrors] = useState({});
 
