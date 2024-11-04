@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 const corsOptions = {
-  origin: "*",
+  origin: ["http://localhost:5174", "https://homemart-style-pro.onrender.com"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
