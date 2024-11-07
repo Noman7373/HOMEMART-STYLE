@@ -3,7 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import UserController from "../controllers/userController.js";
 import checkUserAuth from "../middlewares/auth-middleware.js";
-
+import path from "path";
 // Load environment variables from .env file
 dotenv.config({ path: ".env" });
 
@@ -17,6 +17,8 @@ const corsOptions = {
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
 };
+
+const _dirName = path.resolve();
 
 // Apply Middleware
 app.use(cors(corsOptions));
@@ -45,6 +47,12 @@ app.use("/api/user", router);
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Something broke!");
+});
+
+app.use(express.static(path.join(_dirName, "/FrontEnd/dist")));
+
+app.get("/", (_, res) => {
+  res.sendFile(path.resolve(_dirName, "FrontEnd", "dist", "index.html"));
 });
 
 // Start the server
